@@ -3,10 +3,10 @@
 	"compilerOptions": {
 		"jsx": "react",
 		// Используемая система модулей в выходных файлах.
-		// CommonJS - используются "import" and "export".
-		// ES5 - используются require.
-		"module": "ES6",
-		"target": "ES6",
+		// ES Modules- используются "import" and "export".
+		// CommonJS - используются require.
+		"module": "CommonJS", // commonJS, иначе тип store.getState выдает ошибку
+		"target": "es2017",
 
 		// все файлы скомпилируются сюда. Если использовать outFile - все скомпилируется в 1 файл
 		"outDir": "src/dist",
@@ -21,8 +21,14 @@
 
 		// включает strictNullChecks, noImplicitAny, noImplicitThis, strictFunctionTypes, strictPropertyInitialization
 		"alwaysStrict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true,
 
-		"watch": true
+		"watch": true,
 	},
 	"include": ["src/**/*"],
 	"exclude": ["node_modules"]
