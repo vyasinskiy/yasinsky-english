@@ -1,0 +1,29 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"jsx": "react",
+		// Используемая система модулей в выходных файлах.
+		// CommonJS - используются "import" and "export".
+		// ES5 - используются require.
+		"module": "ES6",
+		"target": "ES6",
+
+		// все файлы скомпилируются сюда. Если использовать outFile - все скомпилируется в 1 файл
+		"outDir": "src/dist",
+
+		// Данный флаг так же активирует allowSyntheticDefaultImports.
+		// Позволяет импортировать CommonJS пакеты как ES6.
+		"esModuleInterop": true,
+
+		// если true - вместо [import * as React from 'react'] можно писать [import React from 'react']
+		"allowSyntheticDefaultImports": false,
+		"sourceMap": true,
+
+		// включает strictNullChecks, noImplicitAny, noImplicitThis, strictFunctionTypes, strictPropertyInitialization
+		"alwaysStrict": true,
+
+		"watch": true
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules"]
+}
