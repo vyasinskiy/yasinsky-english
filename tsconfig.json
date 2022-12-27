@@ -1,35 +1,39 @@
 {
-	"compileOnSave": true,
-	"compilerOptions": {
-		"jsx": "react",
-		// Используемая система модулей в выходных файлах.
-		// ES Modules- используются "import" and "export".
-		// CommonJS - используются require.
-		"module": "CommonJS", // commonJS, иначе тип store.getState выдает ошибку
-		"target": "es2017",
-
-		// все файлы скомпилируются сюда. Если использовать outFile - все скомпилируется в 1 файл
-		"outDir": "src/dist",
-
-		// Данный флаг так же активирует allowSyntheticDefaultImports.
-		// Позволяет импортировать CommonJS пакеты как ES6.
-		"esModuleInterop": true,
-
-		// если true - вместо [import * as React from 'react'] можно писать [import React from 'react']
-		"allowSyntheticDefaultImports": false,
-		"sourceMap": true,
-
-		// включает strictNullChecks, noImplicitAny, noImplicitThis, strictFunctionTypes, strictPropertyInitialization
-		"alwaysStrict": true,
-		"noImplicitAny": true,
-		"strictNullChecks": true,
-		"strictFunctionTypes": true,
-		"strictBindCallApply": true,
-		"strictPropertyInitialization": true,
-		"noImplicitThis": true,
-
-		"watch": true,
-	},
-	"include": ["src/**/*"],
-	"exclude": ["node_modules"]
+  "compileOnSave": true,
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "esnext",
+    "target": "es2017",
+    "outDir": "src/dist",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "watch": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

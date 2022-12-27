@@ -1,71 +1,69 @@
-import { PayloadAction } from '../../node_modules/@reduxjs/toolkit/dist/createAction';
-import { createSlice } from '../../node_modules/@reduxjs/toolkit/dist/createSlice';
+import { PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+import { translations } from '../assets';
 
-type Lang = 'en' | 'ru';
-
-interface Word {
-	'Search language': Lang;
-	'Translation language': Lang;
+export interface Word {
+	'Search language': string;
+	'Translation language': string;
 	'Search text': string;
 	'Translation text': string;
+	'Tags / Comments': string;
 	'Search example': string;
 	'Translation example': string;
+	'Source text': string;
+	'Document / URL': string;
 }
 
 interface MainState {
 	all: Word[];
-	succeed: Word[];
-	skipped: Word[];
+	succeed: SuccedTranslations;
 }
 
-function isMainState(data: unknown): data is MainState {
-	return (
-		!!data &&
-		typeof data === 'object' &&
-		'all' in data &&
-		'succeed' in data &&
-		'skipper' in data
-	);
+interface SuccedTranslations {
+	[key: Word['Translation text']]: Word[];
+}
+
+function isSuccedData(data: unknown): data is SuccedTranslations {
+	return !!data && typeof data === 'object';
 }
 
 const emptyState: MainState = {
-	all: [],
-	succeed: [],
-	skipped: [],
+	all: translations,
+	succeed: {},
 };
 
 const lazyInitialize = (): MainState => {
-	const localStorageItem = localStorage.getItem('translations');
+	const localStorageData = localStorage.getItem('succed-translations');
 
-	if (!localStorageItem) {
+	if (!localStorageData) {
 		return emptyState;
 	}
 
-	const storageData = JSON.parse(localStorageItem);
+	const succeed = JSON.parse(localStorageData);
 
-	if (!isMainState(storageData)) {
+	if (!isSuccedData(succeed)) {
 		return emptyState;
 	}
 
-	return storageData;
+	return {
+		all: translations,
+		succeed: succeed,
+	};
 };
 
 const mainSlice = createSlice({
 	name: 'main',
-	initialState: lazyInitialize(),
+	initialState: lazyInitialize,
 	reducers: {
-		setAsSucceed(state, action: PayloadAction<Word>) {
+		setAsSucceed(state, action: PayloadAction<number>) {
+			const succedWord = state.all[action.payload];
+			const rusKey = succedWord['Translation text'].toLowerCase();
+			state.succeed[rusKey].push(succedWord);
+
 			const filtredAll = state.all.filter(
-				(word) => word['Search text'] !== action.payload['Search text']
+				(_, index) => index !== action.payload
 			);
 			state.all = filtredAll;
-
-			const filtredSkipped = state.skipped.filter(
-				(word) => word['Search text'] !== action.payload['Search text']
-			);
-			state.skipped = filtredSkipped;
-
-			state.succeed.push(action.payload);
 		},
 	},
 });
