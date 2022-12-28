@@ -14,13 +14,16 @@ export interface Word {
 	'Document / URL': string;
 }
 
+type RusKey = Word['Translation text'];
+type EngKey = Word['Search text'];
+
 interface MainState {
 	all: Word[];
 	succeed: SuccedTranslations;
 }
 
 interface SuccedTranslations {
-	[key: Word['Translation text']]: Word[];
+	[key: RusKey]: EngKey[];
 }
 
 function isSuccedData(data: unknown): data is SuccedTranslations {
@@ -57,8 +60,15 @@ const mainSlice = createSlice({
 	reducers: {
 		setAsSucceed(state, action: PayloadAction<number>) {
 			const succedWord = state.all[action.payload];
-			const rusKey = succedWord['Translation text'].toLowerCase();
-			state.succeed[rusKey].push(succedWord);
+			const rusKey = succedWord['Translation text'];
+			const engKey = succedWord['Search text'];
+
+			const hasSucceedSynonyms = state.succeed[rusKey];
+			if (hasSucceedSynonyms) {
+				state.succeed[rusKey].push(engKey);
+			} else {
+				state.succeed[rusKey] = [engKey];
+			}
 
 			const filtredAll = state.all.filter(
 				(_, index) => index !== action.payload

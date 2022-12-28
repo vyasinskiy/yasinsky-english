@@ -5,6 +5,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #e7ebf127;
 }
 
 .wrapper {
@@ -20,6 +21,12 @@ body {
 	.error {
 		color: red;
 	}
+}
+
+.helpButtons {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
 }
 
 .result,
