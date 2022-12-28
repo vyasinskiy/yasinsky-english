@@ -1,5 +1,4 @@
 body {
-	background-color: rgb(44, 46, 58);
 	width: 100vw;
 	height: 100vh;
 	margin: 0;
@@ -13,19 +12,14 @@ body {
 	max-width: 400px;
 	height: 70vh;
 	text-align: center;
-	color: #fff;
-}
 
-.input {
-	display: block;
-	width: 100%;
-	height: 25px;
-	margin-bottom: 20px;
-	outline: none;
-}
+	& .verticalShift {
+		margin-bottom: 10px;
+	}
 
-.input:active {
-	outline: none;
+	.error {
+		color: red;
+	}
 }
 
 .result,
