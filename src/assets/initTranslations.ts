@@ -1,5 +1,5 @@
-import { Word } from '../store';
 import json from './translations.json';
+import { Word } from './types';
 
 function isWordsArray(json: unknown): json is Word[] {
 	return (

@@ -1,29 +1,11 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 import { translations } from '../assets';
-
-export interface Word {
-	'Search language': string;
-	'Translation language': string;
-	'Search text': string;
-	'Translation text': string;
-	'Tags / Comments': string;
-	'Search example': string;
-	'Translation example': string;
-	'Source text': string;
-	'Document / URL': string;
-}
-
-type RusKey = Word['Translation text'];
-type EngKey = Word['Search text'];
+import { SuccedTranslations, Word } from '../assets/types';
 
 interface MainState {
 	all: Word[];
 	succeed: SuccedTranslations;
-}
-
-interface SuccedTranslations {
-	[key: RusKey]: EngKey[];
 }
 
 function isSuccedData(data: unknown): data is SuccedTranslations {

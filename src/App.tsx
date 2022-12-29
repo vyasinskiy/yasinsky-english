@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useLayoutEffect, FormEvent, ChangeEvent } from 'react';
+import { useState, useEffect, FormEvent, ChangeEvent } from 'react';
 import { useSelector } from 'react-redux';
 import { Button, TextField } from '@mui/material';
 
@@ -7,12 +7,14 @@ import { useAppDispatch, setAsSucceed, RootState } from './store';
 import { synonymsMap } from './assets/initTranslations';
 
 import styles from './App.module.scss';
-import { getRandomXXX } from './hooks/helpers';
+import { saveProgressToLocalStorage } from './hooks/helpers';
+import { useUpdateIndex } from './hooks/useUpdateIndex';
 
 function App() {
 	const dispatch = useAppDispatch();
 
-	const [currentIndex, setCurrentIndex] = useState<number>(getRandomXXX());
+	const [currentIndex, updateIndex] = useUpdateIndex();
+
 	const [value, setValue] = useState<string>('');
 	const [error, setError] = useState<string>('');
 	const [showHelp, setShowHelp] = useState<boolean>(false);
@@ -22,16 +24,10 @@ function App() {
 
 	const rusKey = all[currentIndex]['Translation text'];
 	const engKey = all[currentIndex]['Search text'];
-	const helpText = all[currentIndex]['Search example'];
 
-	useLayoutEffect(() => {
-		const isAlreadySucceed =
-			succeed[rusKey] && succeed[rusKey].includes(engKey);
-
-		if (isAlreadySucceed) {
-			setCurrentIndex(getRandomXXX());
-		}
-	}, [currentIndex]);
+	useEffect(() => {
+		return saveProgressToLocalStorage(succeed);
+	});
 
 	const onChange = (event: ChangeEvent<HTMLInputElement>) =>
 		setValue(event.target.value);
@@ -40,20 +36,29 @@ function App() {
 		event.preventDefault();
 
 		const isCorrectAnswer = value === engKey;
-		const isSynonym = synonymsMap[rusKey].includes(value);
+		const isPartiallyCorrect = !isCorrectAnswer && engKey.includes(value);
+		const isSynonym =
+			!isCorrectAnswer && synonymsMap[rusKey].includes(value);
 
-		if (!isCorrectAnswer && !isSynonym) {
+		if (!isCorrectAnswer && !isPartiallyCorrect && !isSynonym) {
 			setError('Wrong translation!');
 			return;
 		}
 
-		if (!isCorrectAnswer && isSynonym) {
+		if (isPartiallyCorrect) {
+			onHelp();
+			return;
+		}
+
+		if (isSynonym) {
 			if (synonymsSelected.includes(value)) {
 				return;
 			}
 
-			setError('Is synonym!');
+			setError('Synonym! Try another one!');
+			setValue('');
 			setSynonymsSelected((synonyms) => [...synonyms, value]);
+			// TODO: setAsSucceed(synonym);
 			return;
 		}
 
@@ -62,9 +67,9 @@ function App() {
 	};
 
 	const next = () => {
+		updateIndex();
 		setValue('');
 		setError('');
-		setCurrentIndex((index) => ++index);
 		setSynonymsSelected([]);
 		setShowHelp(false);
 	};
@@ -116,13 +121,13 @@ function App() {
 				</div>
 			</form>
 
-			<div className={styles.verticalShift}>{showHelp && helpText}</div>
-
 			<ul>
 				{synonymsSelected.map((synonym) => (
 					<li key={synonym}>{synonym}</li>
 				))}
 			</ul>
+
+			<h3 className={styles.verticalShift}>{showHelp && engKey}</h3>
 		</div>
 	);
 }
