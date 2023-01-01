@@ -26,8 +26,8 @@ function App() {
 	const engKey = all[currentIndex]['Search text'];
 
 	useEffect(() => {
-		return saveProgressToLocalStorage(succeed);
-	});
+		saveProgressToLocalStorage(succeed);
+	}, [succeed]);
 
 	const onChange = (event: ChangeEvent<HTMLInputElement>) =>
 		setValue(event.target.value);

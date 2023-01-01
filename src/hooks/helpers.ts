@@ -14,8 +14,8 @@ function getRandomDigit(): number {
 	return +(Math.random() * 10).toFixed(0);
 }
 
-export function saveProgressToLocalStorage(succeed: SuccedTranslations) {
-	localStorage.setItem('succed', JSON.stringify(succeed));
+export function saveProgressToLocalStorage(progress: SuccedTranslations) {
+	localStorage.setItem('succed-translations', JSON.stringify(progress));
 }
 
 export function getProgressFromLocalStorage() {
