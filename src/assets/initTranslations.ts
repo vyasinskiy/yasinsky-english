@@ -1,5 +1,5 @@
 import json from './translations.json';
-import { Word } from './types';
+import { SynonymsMap, Word } from './types';
 
 function isWordsArray(json: unknown): json is Word[] {
 	return (
@@ -17,10 +17,6 @@ function isWordsArray(json: unknown): json is Word[] {
 	);
 }
 
-interface SynonymsMap {
-	[key: string]: string[];
-}
-
 export const translations = isWordsArray(json)
 	? json
 			.filter((translation) => translation['Search language'] === 'en')
@@ -32,19 +28,37 @@ export const translations = isWordsArray(json)
 			}))
 	: [];
 
-export const synonymsMap: SynonymsMap = translations.reduce((map, item) => {
-	const rusKey = item['Translation text'];
-	const engKey = item['Search text'];
+export const synonymsMap: SynonymsMap = translations.reduce(
+	(map, item, index) => {
+		const rusKey = item['Translation text'];
+		const engKey = item['Search text'];
 
-	if (!rusKey || !engKey) {
-		return map;
-	}
+		if (!rusKey || !engKey) {
+			return map;
+		}
 
-	if (map[rusKey] && !map[rusKey].includes(engKey)) {
-		map[rusKey].push(engKey);
+		const newSynonymItem = {
+			engKey: engKey,
+			allIndex: index,
+		};
+
+		const synonymsArray = map[rusKey];
+
+		if (!synonymsArray) {
+			map[rusKey] = [newSynonymItem];
+			return map;
+		}
+
+		const isSynonymsArrayIncludesSynonym = Boolean(
+			synonymsArray.find((item) => item.engKey === engKey)
+		);
+
+		if (isSynonymsArrayIncludesSynonym) {
+			return map;
+		}
+
+		map[rusKey].push(newSynonymItem);
 		return map;
-	} else {
-		map[rusKey] = [engKey];
-		return map;
-	}
-}, {} as SynonymsMap);
+	},
+	{} as SynonymsMap
+);

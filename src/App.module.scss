@@ -31,8 +31,17 @@ body {
 
 .result,
 .synonyms,
-.example {
+.help {
 	display: block;
 	margin-top: 30px;
 	font-size: 20px;
+}
+
+.exampleText {
+	font-size: 20px;
+}
+
+.help {
+	cursor: pointer;
+	font-weight: bold;
 }

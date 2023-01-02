@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect, FormEvent, ChangeEvent } from 'react';
 import { useSelector } from 'react-redux';
-import { Button, TextField } from '@mui/material';
+import { Button, TextField, Tooltip } from '@mui/material';
 
 import { useAppDispatch, setAsSucceed, RootState } from './store';
 import { synonymsMap } from './assets/initTranslations';
@@ -24,6 +24,7 @@ function App() {
 
 	const rusKey = all[currentIndex]['Translation text'];
 	const engKey = all[currentIndex]['Search text'];
+	const example = all[currentIndex]['Search example'];
 
 	useEffect(() => {
 		saveProgressToLocalStorage(succeed);
@@ -36,37 +37,36 @@ function App() {
 		event.preventDefault();
 
 		const isCorrectAnswer = value === engKey;
-		const isPartiallyCorrect = !isCorrectAnswer && engKey.includes(value);
-		const isSynonym =
-			!isCorrectAnswer && synonymsMap[rusKey].includes(value);
 
-		if (!isCorrectAnswer && !isPartiallyCorrect && !isSynonym) {
-			setError('Wrong translation!');
+		if (isCorrectAnswer) {
+			dispatch(setAsSucceed(currentIndex));
+			onNext();
 			return;
 		}
+
+		const isPartiallyCorrect = engKey.includes(value);
 
 		if (isPartiallyCorrect) {
 			onHelp();
 			return;
 		}
 
-		if (isSynonym) {
-			if (synonymsSelected.includes(value)) {
-				return;
-			}
+		const synonymData = synonymsMap[rusKey].find(
+			(synonymData) => synonymData.engKey === value
+		);
 
-			setError('Synonym! Try another one!');
-			setValue('');
-			setSynonymsSelected((synonyms) => [...synonyms, value]);
-			// TODO: setAsSucceed(synonym);
+		if (!synonymData || synonymsSelected.includes(value)) {
+			setError('Wrong translation!');
 			return;
 		}
 
-		dispatch(setAsSucceed(currentIndex));
-		next();
+		setError('Synonym! Try another one!');
+		setValue('');
+		setSynonymsSelected((synonyms) => [...synonyms, value]);
+		dispatch(setAsSucceed(synonymData.allIndex));
 	};
 
-	const next = () => {
+	const onNext = () => {
 		updateIndex();
 		setValue('');
 		setError('');
@@ -114,7 +114,7 @@ function App() {
 						className={styles.verticalShift}
 						variant="outlined"
 						fullWidth={true}
-						onClick={next}
+						onClick={onNext}
 					>
 						Skip
 					</Button>
@@ -126,8 +126,16 @@ function App() {
 					<li key={synonym}>{synonym}</li>
 				))}
 			</ul>
-
-			<h3 className={styles.verticalShift}>{showHelp && engKey}</h3>
+			{showHelp && (
+				<Tooltip
+					className={styles.tooltip}
+					title={
+						<span className={styles.exampleText}>{example}</span>
+					}
+				>
+					<span className={styles.help}>{engKey}</span>
+				</Tooltip>
+			)}
 		</div>
 	);
 }

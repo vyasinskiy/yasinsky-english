@@ -16,3 +16,12 @@ export type EngKey = Word['Search text'];
 export interface SuccedTranslations {
 	[key: RusKey]: EngKey[];
 }
+
+interface SynonymData {
+	engKey: string;
+	allIndex: number;
+}
+
+export interface SynonymsMap {
+	[key: string]: SynonymData[];
+}

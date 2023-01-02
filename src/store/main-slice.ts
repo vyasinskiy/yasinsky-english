@@ -41,6 +41,7 @@ const mainSlice = createSlice({
 	initialState: lazyInitialize,
 	reducers: {
 		setAsSucceed(state, action: PayloadAction<number>) {
+			console.log(action.type, action.payload);
 			const succedWord = state.all[action.payload];
 			const rusKey = succedWord['Translation text'];
 			const engKey = succedWord['Search text'];
