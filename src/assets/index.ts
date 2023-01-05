@@ -1,1 +1,1 @@
-export { translations, synonymsMap } from './initTranslations';
+export { translations, mapRusKeyToSynonyms } from './initTranslations';

@@ -13,15 +13,15 @@ export interface Word {
 export type RusKey = Word['Translation text'];
 export type EngKey = Word['Search text'];
 
-export interface SuccedTranslations {
+export interface MapRusKeyToEngKeys {
 	[key: RusKey]: EngKey[];
 }
 
 interface SynonymData {
 	engKey: string;
-	allIndex: number;
+	example: string;
 }
 
-export interface SynonymsMap {
-	[key: string]: SynonymData[];
+export interface MapRusKeyToSynonyms {
+	[key: RusKey]: SynonymData[];
 }

@@ -1,5 +1,5 @@
 import json from './translations.json';
-import { SynonymsMap, Word } from './types';
+import { MapRusKeyToSynonyms, Word } from './types';
 
 function isWordsArray(json: unknown): json is Word[] {
 	return (
@@ -28,37 +28,23 @@ export const translations = isWordsArray(json)
 			}))
 	: [];
 
-export const synonymsMap: SynonymsMap = translations.reduce(
-	(map, item, index) => {
+export const mapRusKeyToSynonyms: MapRusKeyToSynonyms = translations.reduce(
+	(map, item) => {
 		const rusKey = item['Translation text'];
 		const engKey = item['Search text'];
+		const example = item['Search example'];
 
 		if (!rusKey || !engKey) {
 			return map;
 		}
 
-		const newSynonymItem = {
-			engKey: engKey,
-			allIndex: index,
-		};
-
-		const synonymsArray = map[rusKey];
-
-		if (!synonymsArray) {
-			map[rusKey] = [newSynonymItem];
-			return map;
+		if (!map[rusKey]) {
+			map[rusKey] = [{ engKey, example }];
+		} else {
+			map[rusKey] = [...map[rusKey], { engKey, example }];
 		}
 
-		const isSynonymsArrayIncludesSynonym = Boolean(
-			synonymsArray.find((item) => item.engKey === engKey)
-		);
-
-		if (isSynonymsArrayIncludesSynonym) {
-			return map;
-		}
-
-		map[rusKey].push(newSynonymItem);
 		return map;
 	},
-	{} as SynonymsMap
+	{} as MapRusKeyToSynonyms
 );
