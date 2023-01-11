@@ -33,7 +33,8 @@ function App() {
 
 	const rusKey = Object.keys(todo).sort()[currentIndex];
 	const engKey = todo[rusKey][0].engKey;
-	const example = todo[rusKey][0].example;
+	const engContext = todo[rusKey][0].engContext;
+	const rusContext = todo[rusKey][0].rusContext;
 
 	console.log('rusKey', rusKey);
 	console.log('engKey', engKey);
@@ -54,6 +55,10 @@ function App() {
 	const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
 		console.log('handleSubmit');
 		event.preventDefault();
+
+		if (value === '') {
+			return;
+		}
 
 		const isCorrectAnswer = value === engKey;
 
@@ -113,7 +118,12 @@ function App() {
 
 	return (
 		<div className={styles.wrapper}>
-			<h1>{rusKey[0].toUpperCase() + rusKey.slice(1)}</h1>
+			<Tooltip
+				className={styles.tooltip}
+				title={<span className={styles.exampleText}>{rusContext}</span>}
+			>
+				<h1>{rusKey[0].toUpperCase() + rusKey.slice(1)}</h1>
+			</Tooltip>
 
 			<form onSubmit={handleSubmit}>
 				<TextField
@@ -144,6 +154,7 @@ function App() {
 						variant="outlined"
 						fullWidth={true}
 						onClick={onHelp}
+						disabled={showHelp}
 					>
 						Help
 					</Button>
@@ -171,7 +182,7 @@ function App() {
 				<Tooltip
 					className={styles.tooltip}
 					title={
-						<span className={styles.exampleText}>{example}</span>
+						<span className={styles.exampleText}>{engContext}</span>
 					}
 				>
 					<span className={styles.help}>{engKey}</span>

@@ -19,7 +19,8 @@ export interface MapRusKeyToEngKeys {
 
 interface SynonymData {
 	engKey: string;
-	example: string;
+	engContext: string;
+	rusContext: string;
 }
 
 export interface MapRusKeyToSynonyms {

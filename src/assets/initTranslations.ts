@@ -32,16 +32,17 @@ export const mapRusKeyToSynonyms: MapRusKeyToSynonyms = translations.reduce(
 	(map, item) => {
 		const rusKey = item['Translation text'];
 		const engKey = item['Search text'];
-		const example = item['Search example'];
+		const engContext = item['Search example'];
+		const rusContext = item['Translation example'];
 
 		if (!rusKey || !engKey) {
 			return map;
 		}
 
 		if (!map[rusKey]) {
-			map[rusKey] = [{ engKey, example }];
+			map[rusKey] = [{ engKey, engContext, rusContext }];
 		} else {
-			map[rusKey] = [...map[rusKey], { engKey, example }];
+			map[rusKey] = [...map[rusKey], { engKey, engContext, rusContext }];
 		}
 
 		return map;
