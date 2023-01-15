@@ -16,22 +16,20 @@ import { useAppDispatch, setAsSucceed, RootState } from './store';
 import styles from './App.module.scss';
 import { saveProgressToLocalStorage } from './hooks/helpers';
 import { useUpdateIndex } from './hooks/useUpdateIndex';
+import { useGetCurrentWord } from './hooks/useGetCurrentWord';
 
 function App() {
 	const dispatch = useAppDispatch();
 	const { all, todo, succeed } = useSelector((state: RootState) => state);
-	const [currentIndex, updateIndex] = useUpdateIndex();
+	const { rusKey, engKey, rusContext, engContext } = useGetCurrentWord();
 	const [isSnackBarOpen, setIsSnackBarOpen] = useState(false);
+
+	const { updateIndex } = useUpdateIndex();
 
 	const [value, setValue] = useState<string>('');
 	const [error, setError] = useState<string>('');
 	const [showHelp, setShowHelp] = useState<boolean>(false);
 	const [synonymsSelected, setSynonymsSelected] = useState<string[]>([]);
-
-	const rusKey = Object.keys(todo).sort()[currentIndex];
-	const engKey = todo[rusKey][0].engKey;
-	const engContext = todo[rusKey][0].engContext;
-	const rusContext = todo[rusKey][0].rusContext;
 
 	useEffect(() => {
 		saveProgressToLocalStorage(succeed);
@@ -53,7 +51,7 @@ function App() {
 		if (isCorrectAnswer) {
 			setIsSnackBarOpen(true);
 			dispatch(setAsSucceed({ rusKey, engKey: value }));
-			onNext();
+			onReset();
 			return;
 		}
 
@@ -91,7 +89,11 @@ function App() {
 	};
 
 	const onNext = () => {
-		updateIndex(Object.keys(todo).length);
+		updateIndex(Object.keys(todo).length - 1);
+		onReset();
+	};
+
+	const onReset = () => {
 		setValue('');
 		setError('');
 		setSynonymsSelected([]);

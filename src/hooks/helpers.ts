@@ -1,20 +1,20 @@
 import { MapRusKeyToEngKeys } from '../assets/types';
 
-export function getRandomXXX(excludeDigit: number, maxIndex: number): number {
-	const randomDigit = getRandomDigit() * getRandomDigit();
+export function getRandomDigit(excludeDigit: number, maxIndex: number): number {
+	const randomDigit = getRandom() * getRandom();
 
 	if (
 		randomDigit < 30 &&
 		randomDigit !== excludeDigit &&
-		randomDigit < maxIndex
+		randomDigit <= maxIndex
 	) {
 		return randomDigit;
 	}
 
-	return getRandomXXX(excludeDigit, maxIndex);
+	return getRandomDigit(excludeDigit, maxIndex);
 }
 
-function getRandomDigit(): number {
+function getRandom(): number {
 	return +(Math.random() * 10).toFixed(0);
 }
 
