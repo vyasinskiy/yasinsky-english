@@ -80,7 +80,6 @@ const mainSlice = createSlice({
 			state,
 			action: PayloadAction<{ rusKey: string; engKey: string }>
 		) {
-			console.log(action.type, action.payload);
 			const { rusKey, engKey } = action.payload;
 
 			const isRusKeyExists = state.succeed[rusKey];
@@ -100,15 +99,8 @@ const mainSlice = createSlice({
 				);
 
 				if (reducedToDoSynonyms.length === 0) {
-					console.log('state.todo[rusKey]', state.todo[rusKey]);
-					console.log(
-						'No synonyms left, deleting rusKey from state.todo....'
-					);
 					delete state.todo[rusKey];
 				} else {
-					console.log('state.todo[rusKey]', state.todo[rusKey]);
-					console.log('reducedToDoSynonyms', reducedToDoSynonyms);
-					console.log('Synonyms decreased, setting newRusKeyData...');
 					state.todo[rusKey] = reducedToDoSynonyms;
 				}
 			}

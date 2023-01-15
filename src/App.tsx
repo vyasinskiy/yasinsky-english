@@ -28,32 +28,20 @@ function App() {
 	const [showHelp, setShowHelp] = useState<boolean>(false);
 	const [synonymsSelected, setSynonymsSelected] = useState<string[]>([]);
 
-	console.log('=======logs=======');
-	console.log('currentIndex', currentIndex);
-
 	const rusKey = Object.keys(todo).sort()[currentIndex];
 	const engKey = todo[rusKey][0].engKey;
 	const engContext = todo[rusKey][0].engContext;
 	const rusContext = todo[rusKey][0].rusContext;
 
-	console.log('rusKey', rusKey);
-	console.log('engKey', engKey);
-
-	console.log('succeed[rusKey]', succeed[rusKey]);
-	console.log('todo[rusKey]', todo[rusKey]);
-
 	useEffect(() => {
-		console.log('saveProgressToLocalStorage');
 		saveProgressToLocalStorage(succeed);
 	}, [succeed]);
 
 	const onChange = (event: ChangeEvent<HTMLInputElement>) => {
-		console.log('onChange');
 		setValue(event.target.value);
 	};
 
 	const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-		console.log('handleSubmit');
 		event.preventDefault();
 
 		if (value === '') {
@@ -103,7 +91,6 @@ function App() {
 	};
 
 	const onNext = () => {
-		console.log('onNext');
 		updateIndex(Object.keys(todo).length);
 		setValue('');
 		setError('');
@@ -111,14 +98,12 @@ function App() {
 		setShowHelp(false);
 	};
 
-	const onHelp = () => {
-		console.log('onHelp');
-		setShowHelp(true);
-	};
+	const onHelp = () => setShowHelp(true);
 
 	return (
 		<div className={styles.wrapper}>
 			<Tooltip
+				placement="top"
 				className={styles.tooltip}
 				title={<span className={styles.exampleText}>{rusContext}</span>}
 			>

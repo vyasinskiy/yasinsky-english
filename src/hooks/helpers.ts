@@ -1,11 +1,9 @@
 import { MapRusKeyToEngKeys } from '../assets/types';
 
 export function getRandomXXX(excludeDigit: number, maxIndex: number): number {
-	console.log('Getting random...');
 	const randomDigit = getRandomDigit() * getRandomDigit();
 
 	if (
-		randomDigit !== 0 &&
 		randomDigit < 30 &&
 		randomDigit !== excludeDigit &&
 		randomDigit < maxIndex
