@@ -7,14 +7,18 @@ export const useGetCurrentWord = () => {
 	const { todo } = useSelector((state: RootState) => state);
 	const { currentIndex, updateIndex } = useUpdateIndex();
 
+	const todoLength = Object.keys(todo).length;
+
 	useEffect(() => {
-		const todoLength = Object.keys(todo).length;
 		if (todoLength === 1) {
 			updateIndex(0);
+			return;
 		}
 
 		updateIndex(todoLength - 1);
 	}, [todo]);
+
+	const updateWord = () => updateIndex(todoLength - 1);
 
 	const currentWord = useMemo(() => {
 		const rusKey = Object.keys(todo).sort()[currentIndex];
@@ -27,5 +31,5 @@ export const useGetCurrentWord = () => {
 		};
 	}, [currentIndex]);
 
-	return currentWord;
+	return { currentWord, updateWord };
 };

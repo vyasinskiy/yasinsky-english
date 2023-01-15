@@ -15,16 +15,16 @@ import { useAppDispatch, setAsSucceed, RootState } from './store';
 
 import styles from './App.module.scss';
 import { saveProgressToLocalStorage } from './hooks/helpers';
-import { useUpdateIndex } from './hooks/useUpdateIndex';
 import { useGetCurrentWord } from './hooks/useGetCurrentWord';
 
 function App() {
 	const dispatch = useAppDispatch();
-	const { all, todo, succeed } = useSelector((state: RootState) => state);
-	const { rusKey, engKey, rusContext, engContext } = useGetCurrentWord();
+	const { all, succeed } = useSelector((state: RootState) => state);
+	const {
+		currentWord: { engKey, rusKey, engContext, rusContext },
+		updateWord,
+	} = useGetCurrentWord();
 	const [isSnackBarOpen, setIsSnackBarOpen] = useState(false);
-
-	const { updateIndex } = useUpdateIndex();
 
 	const [value, setValue] = useState<string>('');
 	const [error, setError] = useState<string>('');
@@ -89,7 +89,7 @@ function App() {
 	};
 
 	const onNext = () => {
-		updateIndex(Object.keys(todo).length - 1);
+		updateWord();
 		onReset();
 	};
 
@@ -179,7 +179,7 @@ function App() {
 				open={isSnackBarOpen}
 				onClose={() => setIsSnackBarOpen(false)}
 				autoHideDuration={2000}
-				message={`Succeed words: ${Object.keys(succeed).length + 1}`}
+				message={`Succeed words: ${Object.keys(succeed).length}`}
 			/>
 		</div>
 	);
