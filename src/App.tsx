@@ -51,6 +51,7 @@ function App() {
 		if (isCorrectAnswer) {
 			setIsSnackBarOpen(true);
 			dispatch(setAsSucceed({ rusKey, engKey: value }));
+			updateWord();
 			onReset();
 			return;
 		}
@@ -89,8 +90,8 @@ function App() {
 	};
 
 	const onNext = () => {
-		updateWord();
 		onReset();
+		updateWord();
 	};
 
 	const onReset = () => {

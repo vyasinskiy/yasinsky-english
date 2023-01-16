@@ -1,24 +1,17 @@
 import { useSelector } from 'react-redux';
 import { RootState } from '../store';
 import { useUpdateIndex } from './useUpdateIndex';
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 
 export const useGetCurrentWord = () => {
 	const { todo } = useSelector((state: RootState) => state);
-	const { currentIndex, updateIndex } = useUpdateIndex();
 
 	const todoLength = Object.keys(todo).length;
+	const maxIndex = todoLength - 1;
 
-	useEffect(() => {
-		if (todoLength === 1) {
-			updateIndex(0);
-			return;
-		}
+	const { currentIndex, updateIndex } = useUpdateIndex(maxIndex);
 
-		updateIndex(todoLength - 1);
-	}, [todo]);
-
-	const updateWord = () => updateIndex(todoLength - 1);
+	const updateWord = () => updateIndex(maxIndex);
 
 	const currentWord = useMemo(() => {
 		const rusKey = Object.keys(todo).sort()[currentIndex];
