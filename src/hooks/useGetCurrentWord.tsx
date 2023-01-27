@@ -6,8 +6,7 @@ import { useMemo } from 'react';
 export const useGetCurrentWord = () => {
 	const { todo } = useSelector((state: RootState) => state);
 
-	const todoLength = Object.keys(todo).length;
-	const maxIndex = todoLength - 1;
+	const maxIndex = Object.keys(todo).length - 1;
 
 	const { currentIndex, updateIndex } = useUpdateIndex(maxIndex);
 

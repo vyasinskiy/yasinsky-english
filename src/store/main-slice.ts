@@ -7,9 +7,11 @@ interface MainState {
 	all: MapRusKeyToSynonyms;
 	todo: MapRusKeyToSynonyms;
 	succeed: MapRusKeyToEngKeys;
+	favorite: MapRusKeyToEngKeys;
+	isGameFinished: boolean;
 }
 
-function isSuccedData(data: unknown): data is MapRusKeyToEngKeys {
+function isTranslationsData(data: unknown): data is MapRusKeyToEngKeys {
 	return (
 		!!data &&
 		typeof data === 'object' &&
@@ -21,27 +23,31 @@ function isSuccedData(data: unknown): data is MapRusKeyToEngKeys {
 	);
 }
 
-const emptyState: MainState = {
-	all: mapRusKeyToSynonyms,
-	todo: mapRusKeyToSynonyms,
-	succeed: {},
-};
-
 const lazyInitialize = (): MainState => {
-	const localStorageData = localStorage.getItem('succed-translations');
+	const state: MainState = {
+		all: mapRusKeyToSynonyms,
+		todo: {},
+		succeed: {},
+		favorite: {},
+		isGameFinished: false,
+	};
 
-	if (!localStorageData) {
-		return emptyState;
+	const succeedData = localStorage.getItem('succed-translations');
+
+	if (succeedData) {
+		const succeed = JSON.parse(succeedData);
+		state.succeed = isTranslationsData(succeed) ? succeed : {};
 	}
 
-	const succeed = JSON.parse(localStorageData);
+	const favoriteData = localStorage.getItem('favorite-translations');
 
-	if (!isSuccedData(succeed)) {
-		return emptyState;
+	if (favoriteData) {
+		const favorite = JSON.parse(favoriteData);
+		state.favorite = isTranslationsData(favorite) ? favorite : {};
 	}
 
 	const todo = Object.keys(mapRusKeyToSynonyms).reduce((acc, rusKey) => {
-		const rusKeySucceedData = succeed[rusKey];
+		const rusKeySucceedData = state.succeed[rusKey];
 		const synonymsData = mapRusKeyToSynonyms[rusKey];
 
 		if (rusKeySucceedData && rusKeySucceedData.length > 0) {
@@ -65,17 +71,41 @@ const lazyInitialize = (): MainState => {
 		}
 	}, {});
 
-	return {
-		all: mapRusKeyToSynonyms,
-		todo: todo,
-		succeed: succeed,
-	};
+	state.todo = todo;
+
+	state.isGameFinished = Object.keys(state.todo).length === 0;
+
+	return state;
 };
 
 const mainSlice = createSlice({
 	name: 'main',
 	initialState: lazyInitialize,
 	reducers: {
+		setIsGameFinished(
+			state,
+			action: PayloadAction<{ isFinished: boolean }>
+		) {
+			state.isGameFinished = action.payload.isFinished;
+		},
+		setAsFavorite(
+			state,
+			action: PayloadAction<{ rusKey: string; engKey: string }>
+		) {
+			const { rusKey, engKey } = action.payload;
+			const isRusKeyExists = state.favorite[rusKey];
+
+			if (!isRusKeyExists) {
+				state.favorite[rusKey] = [];
+			}
+
+			const isEngKeyAlreadyFavorite =
+				state.favorite[rusKey].includes(engKey);
+
+			if (!isEngKeyAlreadyFavorite) {
+				state.favorite[rusKey].push(engKey);
+			}
+		},
 		setAsSucceed(
 			state,
 			action: PayloadAction<{ rusKey: string; engKey: string }>
@@ -104,9 +134,15 @@ const mainSlice = createSlice({
 					state.todo[rusKey] = reducedToDoSynonyms;
 				}
 			}
+
+			const isGameFinished = Object.keys(state.todo).length === 0;
+			if (isGameFinished) {
+				setIsGameFinished({ isFinished: true });
+			}
 		},
 	},
 });
 
-export const { setAsSucceed } = mainSlice.actions;
+export const { setAsSucceed, setAsFavorite, setIsGameFinished } =
+	mainSlice.actions;
 export default mainSlice.reducer;

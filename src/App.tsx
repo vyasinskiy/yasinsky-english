@@ -11,7 +11,12 @@ import {
 	Tooltip,
 } from '@mui/material';
 
-import { useAppDispatch, setAsSucceed, RootState } from './store';
+import {
+	useAppDispatch,
+	setAsSucceed,
+	setAsFavorite,
+	RootState,
+} from './store';
 
 import styles from './App.module.scss';
 import { saveProgressToLocalStorage } from './hooks/helpers';
@@ -19,7 +24,14 @@ import { useGetCurrentWord } from './hooks/useGetCurrentWord';
 
 function App() {
 	const dispatch = useAppDispatch();
-	const { all, succeed } = useSelector((state: RootState) => state);
+	const { all, succeed, favorite, isGameFinished } = useSelector(
+		(state: RootState) => state
+	);
+
+	if (isGameFinished) {
+		return 'Game finished';
+	}
+
 	const {
 		currentWord: { engKey, rusKey, engContext, rusContext },
 		updateWord,
@@ -31,8 +43,10 @@ function App() {
 	const [showHelp, setShowHelp] = useState<boolean>(false);
 	const [synonymsSelected, setSynonymsSelected] = useState<string[]>([]);
 
+	const isFavorite = favorite[rusKey] && favorite[rusKey].includes(engKey);
+
 	useEffect(() => {
-		saveProgressToLocalStorage(succeed);
+		saveProgressToLocalStorage(succeed, favorite);
 	}, [succeed]);
 
 	const onChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -89,6 +103,9 @@ function App() {
 		setError('Wrong translation!');
 	};
 
+	const handleAddToFavorite = () =>
+		dispatch(setAsFavorite({ rusKey, engKey }));
+
 	const onNext = () => {
 		onReset();
 		updateWord();
@@ -126,6 +143,7 @@ function App() {
 					variant="outlined"
 					error={Boolean(error)}
 					helperText={error}
+					disabled={showHelp}
 				/>
 				<Button
 					className={styles.verticalShift}
@@ -155,6 +173,14 @@ function App() {
 						{showHelp ? 'Next' : 'Skip'}
 					</Button>
 				</div>
+				<Button
+					variant="outlined"
+					fullWidth={true}
+					onClick={handleAddToFavorite}
+					disabled={isFavorite}
+				>
+					Add to favorite
+				</Button>
 			</form>
 
 			<List className={styles.synonyms}>
