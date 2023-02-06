@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { getRandomDigit } from './helpers';
+import { getRandomInt } from './helpers';
 
 export function useUpdateIndex(maxIndex: number) {
 	const [currentIndex, setCurrentIndex] = useState<number>(
-		getRandomDigit(0, maxIndex)
+		getRandomInt(maxIndex)
 	);
 
 	const updateIndex = (maxIndex: number) => {
-		const newIndex = getRandomDigit(currentIndex, maxIndex);
+		const newIndex = getRandomInt(maxIndex, currentIndex);
 		setCurrentIndex(newIndex);
 	};
 

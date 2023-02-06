@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { RootState } from '../store';
 import { useUpdateIndex } from './useUpdateIndex';
-import { useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 
 export const useGetCurrentWord = () => {
 	const { todo } = useSelector((state: RootState) => state);
@@ -21,6 +21,16 @@ export const useGetCurrentWord = () => {
 			engContext: todo[rusKey][0].engContext,
 			rusContext: todo[rusKey][0].rusContext,
 		};
+	}, [todo, currentIndex]);
+
+	const prevWord = useRef(currentWord);
+
+	useEffect(() => {
+		if (prevWord.current.engKey === currentWord.engKey) {
+			updateWord();
+		}
+
+		prevWord.current = currentWord;
 	}, [currentIndex]);
 
 	return { currentWord, updateWord };

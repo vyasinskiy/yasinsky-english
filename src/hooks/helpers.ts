@@ -1,25 +1,22 @@
 import { MapRusKeyToEngKeys } from '../assets/types';
 
-export function getRandomDigit(excludeDigit: number, maxIndex: number): number {
-	let randomDigit = getRandom() * getRandom();
+export function getRandomInt(maxIndex: number, excludeInt?: number): number {
+	let randomInt = getRandom() * getRandom();
 
-	while (!isAcceptedDigit(randomDigit, excludeDigit, maxIndex)) {
-		randomDigit = getRandom() * getRandom();
+	while (!isAcceptedDigit(randomInt, maxIndex, excludeInt)) {
+		randomInt = getRandom() * getRandom();
 	}
 
-	return randomDigit;
+	return randomInt;
 }
 
 function getRandom(): number {
+	// TODO: toFixed(0) never returns 0. At the end of the game it causes infinite loop
 	return +(Math.random() * 10).toFixed(0);
 }
 
-function isAcceptedDigit(
-	digit: number,
-	excludeDigit: number,
-	maxIndex: number
-) {
-	return digit >= 30 || digit === excludeDigit || digit > maxIndex;
+function isAcceptedDigit(digit: number, maxIndex: number, excludeInt?: number) {
+	return digit <= 30 && digit <= maxIndex && digit !== excludeInt;
 }
 
 export function saveProgressToLocalStorage(
