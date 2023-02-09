@@ -3,17 +3,19 @@ import { RootState } from '../store';
 import { useUpdateIndex } from './useUpdateIndex';
 import { useEffect, useMemo, useRef } from 'react';
 
-export const useGetCurrentWord = () => {
-	const { todo } = useSelector((state: RootState) => state);
+export const useWord = () => {
+	const { todo, all, succeed } = useSelector((state: RootState) => state);
+	const { currentIndex, updateIndex } = useUpdateIndex();
 
 	const maxIndex = Object.keys(todo).length - 1;
-
-	const { currentIndex, updateIndex } = useUpdateIndex(maxIndex);
-
 	const updateWord = () => updateIndex(maxIndex);
 
 	const currentWord = useMemo(() => {
 		const rusKey = Object.keys(todo).sort()[currentIndex];
+
+		if (!rusKey) {
+			return null;
+		}
 
 		return {
 			rusKey: rusKey,
@@ -23,9 +25,34 @@ export const useGetCurrentWord = () => {
 		};
 	}, [todo, currentIndex]);
 
+	const checkWord = (value: string) => {
+		if (!currentWord) {
+			return;
+		}
+
+		return {
+			isCorrectAnswer: value === currentWord.engKey,
+			isPartiallyCorrect: currentWord.engKey.includes(value),
+			synonym: {
+				isSynonym: Boolean(
+					all[currentWord.rusKey].find(
+						(item) => item.engKey === value
+					)
+				),
+				isSynonymAlreadySucceed: succeed[currentWord.rusKey]?.find(
+					(engKey) => engKey === value
+				),
+			},
+		};
+	};
+
 	const prevWord = useRef(currentWord);
 
 	useEffect(() => {
+		if (!prevWord.current || !currentWord) {
+			return;
+		}
+
 		if (prevWord.current.engKey === currentWord.engKey) {
 			updateWord();
 		}
@@ -33,5 +60,5 @@ export const useGetCurrentWord = () => {
 		prevWord.current = currentWord;
 	}, [currentIndex]);
 
-	return { currentWord, updateWord };
+	return { currentWord, updateWord, checkWord };
 };

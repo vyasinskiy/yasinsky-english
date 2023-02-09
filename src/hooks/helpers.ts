@@ -1,6 +1,9 @@
 import { MapRusKeyToEngKeys } from '../assets/types';
 
-export function getRandomInt(maxIndex: number, excludeInt?: number): number {
+export function getRandomInt(
+	maxIndex: number,
+	excludeInt: number | null
+): number {
 	let randomInt = getRandom() * getRandom();
 
 	while (!isAcceptedDigit(randomInt, maxIndex, excludeInt)) {
@@ -15,7 +18,11 @@ function getRandom(): number {
 	return +(Math.random() * 10).toFixed(0);
 }
 
-function isAcceptedDigit(digit: number, maxIndex: number, excludeInt?: number) {
+function isAcceptedDigit(
+	digit: number,
+	maxIndex: number,
+	excludeInt: number | null
+) {
 	return digit <= 30 && digit <= maxIndex && digit !== excludeInt;
 }
 
@@ -23,12 +30,12 @@ export function saveProgressToLocalStorage(
 	succed: MapRusKeyToEngKeys,
 	favorite: MapRusKeyToEngKeys
 ) {
-	localStorage.setItem('succed-translations', JSON.stringify(succed));
-	localStorage.setItem('favorite-translations', JSON.stringify(favorite));
+	localStorage.setItem('translations-succed', JSON.stringify(succed));
+	localStorage.setItem('translations-favorite', JSON.stringify(favorite));
 }
 
 export function getProgressFromLocalStorage() {
-	const localStorageData = localStorage.getItem('succed-translations');
+	const localStorageData = localStorage.getItem('translations-succed');
 
 	if (!localStorageData) {
 		return {};

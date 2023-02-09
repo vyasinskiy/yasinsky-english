@@ -22,10 +22,9 @@ export class ErrorBoundary extends React.Component<
 		return { hasError: true };
 	}
 
-	// componentDidCatch(error, errorInfo) {
-	// Можно также сохранить информацию об ошибке в соответствующую службу журнала ошибок
-	// logErrorToMyService(error, errorInfo);
-	// }
+	componentDidCatch() {
+		// TODO: All logging to server here
+	}
 
 	render() {
 		if (this.state.hasError) {

@@ -17,7 +17,7 @@ export interface MapRusKeyToEngKeys {
 	[key: RusKey]: EngKey[];
 }
 
-interface SynonymData {
+export interface SynonymData {
 	engKey: string;
 	engContext: string;
 	rusContext: string;
@@ -25,4 +25,9 @@ interface SynonymData {
 
 export interface MapRusKeyToSynonyms {
 	[key: RusKey]: SynonymData[];
+}
+
+export enum Mode {
+	Advanced = 'advanced',
+	Ordinary = 'ordinary',
 }

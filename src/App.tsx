@@ -20,34 +20,40 @@ import {
 
 import styles from './App.module.scss';
 import { saveProgressToLocalStorage } from './hooks/helpers';
-import { useGetCurrentWord } from './hooks/useGetCurrentWord';
+import { useWord } from './hooks/useWord';
 
 function App() {
 	const dispatch = useAppDispatch();
-	const { all, succeed, favorite, isGameFinished } = useSelector(
-		(state: RootState) => state
-	);
-
-	if (isGameFinished) {
-		return 'Game finished';
-	}
-
-	const {
-		currentWord: { engKey, rusKey, engContext, rusContext },
-		updateWord,
-	} = useGetCurrentWord();
-	const [isSnackBarOpen, setIsSnackBarOpen] = useState(false);
-
 	const [value, setValue] = useState<string>('');
 	const [error, setError] = useState<string>('');
 	const [showHelp, setShowHelp] = useState<boolean>(false);
+	const [isSnackBarOpen, setIsSnackBarOpen] = useState(false);
 	const [synonymsSelected, setSynonymsSelected] = useState<string[]>([]);
-
-	const isFavorite = favorite[rusKey] && favorite[rusKey].includes(engKey);
+	const { todo, succeed, favorite } = useSelector(
+		(state: RootState) => state
+	);
 
 	useEffect(() => {
 		saveProgressToLocalStorage(succeed, favorite);
 	}, [succeed]);
+
+	useEffect(() => {
+		if (Object.keys(todo).length === 0) {
+			return;
+		}
+
+		updateWord();
+	}, [todo]);
+
+	const { currentWord, updateWord, checkWord } = useWord();
+
+	if (!currentWord) {
+		return 'Game finished';
+	}
+
+	const { engKey, rusKey, engContext, rusContext } = currentWord;
+
+	const isFavorite = favorite[rusKey] && favorite[rusKey].includes(engKey);
 
 	const onChange = (event: ChangeEvent<HTMLInputElement>) => {
 		setValue(event.target.value);
@@ -60,24 +66,29 @@ function App() {
 			return;
 		}
 
-		const isCorrectAnswer = value === engKey;
+		const checkResult = checkWord(value);
+
+		if (!checkResult) {
+			return;
+		}
+
+		const {
+			isCorrectAnswer,
+			isPartiallyCorrect,
+			synonym: { isSynonym, isSynonymAlreadySucceed },
+		} = checkResult;
 
 		if (isCorrectAnswer) {
 			setIsSnackBarOpen(true);
 			dispatch(setAsSucceed({ rusKey, engKey: value }));
-			updateWord();
 			onReset();
 			return;
 		}
-
-		const isPartiallyCorrect = engKey.includes(value);
 
 		if (isPartiallyCorrect) {
 			onHelp();
 			return;
 		}
-
-		const isSynonym = all[rusKey].find((item) => item.engKey === value);
 
 		if (isSynonym) {
 			setValue('');
@@ -88,10 +99,6 @@ function App() {
 			if (!isSynonymAlreadySelected) {
 				setSynonymsSelected((synonyms) => [...synonyms, value]);
 			}
-
-			const isSynonymAlreadySucceed =
-				succeed[rusKey] &&
-				succeed[rusKey].find((engKey) => engKey === value);
 
 			if (!isSynonymAlreadySucceed) {
 				setIsSnackBarOpen(true);
