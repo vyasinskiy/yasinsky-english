@@ -152,11 +152,14 @@ const mainSlice = createSlice({
 				state.favorite[rusKey] = [];
 			}
 
-			const isEngKeyAlreadyFavorite =
-				state.favorite[rusKey].includes(engKey);
+			const engKeyIndex = state.favorite[rusKey].findIndex(
+				(item) => item === engKey
+			);
 
-			if (!isEngKeyAlreadyFavorite) {
+			if (engKeyIndex === -1) {
 				state.favorite[rusKey].push(engKey);
+			} else {
+				state.favorite[rusKey].splice(engKeyIndex, 1);
 			}
 		},
 		setAsSucceed(
@@ -179,9 +182,9 @@ const mainSlice = createSlice({
 				return;
 			}
 
-			const isRusKeyExists = state.succeed[rusKey];
+			const isSucceedRusKeyExists = state.succeed[rusKey];
 
-			if (!isRusKeyExists) {
+			if (!isSucceedRusKeyExists) {
 				state.succeed[rusKey] = [];
 			}
 

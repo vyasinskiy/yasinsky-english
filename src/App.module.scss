@@ -23,6 +23,21 @@ body {
 	}
 }
 
+.title {
+	display: inline-block;
+	position: relative;
+
+	.favoriteIcon {
+		position: absolute;
+		top: 0;
+		right: -24px;
+		cursor: pointer;
+		&.active {
+			color: #1976d2;
+		}
+	}
+}
+
 .helpButtons {
 	display: flex;
 	justify-content: space-between;

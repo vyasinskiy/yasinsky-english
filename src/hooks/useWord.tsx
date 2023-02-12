@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { RootState } from '../store';
 import { useUpdateIndex } from './useUpdateIndex';
-import { useEffect, useMemo, useRef } from 'react';
+import { useLayoutEffect, useMemo, useRef } from 'react';
 
 export const useWord = () => {
 	const { todo, all, succeed } = useSelector((state: RootState) => state);
@@ -23,7 +23,7 @@ export const useWord = () => {
 			engContext: todo[rusKey][0].engContext,
 			rusContext: todo[rusKey][0].rusContext,
 		};
-	}, [todo, currentIndex]);
+	}, [currentIndex]);
 
 	const checkWord = (value: string) => {
 		if (!currentWord) {
@@ -46,18 +46,18 @@ export const useWord = () => {
 		};
 	};
 
-	const prevWord = useRef(currentWord);
+	const prevWord = useRef<typeof currentWord>(null);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (!prevWord.current || !currentWord) {
 			return;
 		}
 
 		if (prevWord.current.engKey === currentWord.engKey) {
+			console.log('update');
 			updateWord();
+			prevWord.current = currentWord;
 		}
-
-		prevWord.current = currentWord;
 	}, [currentIndex]);
 
 	return { currentWord, updateWord, checkWord };

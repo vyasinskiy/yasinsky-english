@@ -11,12 +11,16 @@ import {
 	Tooltip,
 } from '@mui/material';
 
+import cn from 'classnames';
+
 import {
 	useAppDispatch,
 	setAsSucceed,
 	setAsFavorite,
 	RootState,
 } from './store';
+
+import { ReactComponent as FavoriteIcon } from './assets/icons/favorite.svg';
 
 import styles from './App.module.scss';
 import { saveProgressToLocalStorage } from './hooks/helpers';
@@ -38,7 +42,7 @@ function App() {
 	}, [succeed]);
 
 	useEffect(() => {
-		if (Object.keys(todo).length === 0) {
+		if (Object.keys(todo).length === 0 || synonymsSelected.length > 0) {
 			return;
 		}
 
@@ -80,8 +84,9 @@ function App() {
 
 		if (isCorrectAnswer) {
 			setIsSnackBarOpen(true);
-			dispatch(setAsSucceed({ rusKey, engKey: value }));
 			onReset();
+			setSynonymsSelected([]);
+			dispatch(setAsSucceed({ rusKey, engKey: value }));
 			return;
 		}
 
@@ -104,6 +109,7 @@ function App() {
 				setIsSnackBarOpen(true);
 				dispatch(setAsSucceed({ rusKey, engKey: value }));
 			}
+
 			return;
 		}
 
@@ -129,13 +135,23 @@ function App() {
 
 	return (
 		<div className={styles.wrapper}>
-			<Tooltip
-				placement="top"
-				className={styles.tooltip}
-				title={<span className={styles.exampleText}>{rusContext}</span>}
-			>
-				<h1>{rusKey[0].toUpperCase() + rusKey.slice(1)}</h1>
-			</Tooltip>
+			<h1 className={styles.title}>
+				<Tooltip
+					placement="top"
+					className={styles.tooltip}
+					title={
+						<span className={styles.exampleText}>{rusContext}</span>
+					}
+				>
+					<span>{rusKey[0].toUpperCase() + rusKey.slice(1)}</span>
+				</Tooltip>
+				<FavoriteIcon
+					className={cn(styles.favoriteIcon, {
+						[styles.active]: isFavorite,
+					})}
+					onClick={handleAddToFavorite}
+				/>
+			</h1>
 
 			<form onSubmit={handleSubmit}>
 				<TextField
@@ -180,14 +196,6 @@ function App() {
 						{showHelp ? 'Next' : 'Skip'}
 					</Button>
 				</div>
-				<Button
-					variant="outlined"
-					fullWidth={true}
-					onClick={handleAddToFavorite}
-					disabled={isFavorite}
-				>
-					Add to favorite
-				</Button>
 			</form>
 
 			<List className={styles.synonyms}>
