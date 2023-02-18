@@ -37,6 +37,10 @@ function getAdvancedData(favorite: MapRusKeyToEngKeys) {
 	const advancedData = {} as MapRusKeyToSynonyms;
 
 	for (const [rusKey, engFavoriteValues] of Object.entries(favorite)) {
+		if (engFavoriteValues.length === 0) {
+			continue;
+		}
+
 		if (!mapRusKeyToSynonyms[rusKey]) {
 			continue;
 		}
@@ -88,11 +92,11 @@ const lazyInitialize = (): MainState => {
 		state.favorite = isTranslationsData(favorite) ? favorite : {};
 	}
 
-	const modeData = localStorage.getItem('translations-mode');
+	// const modeData = localStorage.getItem('translations-mode');
 
-	if (modeData) {
-		state.mode = isModeData(modeData) ? modeData : Mode.Ordinary;
-	}
+	// if (modeData) {
+	// 	state.mode = isModeData(modeData) ? modeData : Mode.Ordinary;
+	// }
 
 	if (state.mode === Mode.Advanced) {
 		state.todo = getAdvancedData(state.favorite);
@@ -146,20 +150,23 @@ const mainSlice = createSlice({
 			action: PayloadAction<{ rusKey: string; engKey: string }>
 		) {
 			const { rusKey, engKey } = action.payload;
-			const isRusKeyExists = state.favorite[rusKey];
+			let engKeys = state.favorite[rusKey];
 
-			if (!isRusKeyExists) {
+			if (!engKeys) {
 				state.favorite[rusKey] = [];
+				engKeys = state.favorite[rusKey];
 			}
 
-			const engKeyIndex = state.favorite[rusKey].findIndex(
-				(item) => item === engKey
-			);
+			const engKeyIndex = engKeys.findIndex((item) => item === engKey);
 
 			if (engKeyIndex === -1) {
-				state.favorite[rusKey].push(engKey);
+				engKeys.push(engKey);
 			} else {
-				state.favorite[rusKey].splice(engKeyIndex, 1);
+				if (engKeys.length > 1) {
+					state.favorite[rusKey].splice(engKeyIndex, 1);
+				} else {
+					delete state.favorite[rusKey];
+				}
 			}
 		},
 		setAsSucceed(
@@ -168,7 +175,13 @@ const mainSlice = createSlice({
 		) {
 			const { rusKey, engKey } = action.payload;
 
-			const reducedToDoSynonyms = state.todo[rusKey].filter(
+			const engKeys = state.todo[rusKey];
+
+			if (!engKeys) {
+				return;
+			}
+
+			const reducedToDoSynonyms = engKeys.filter(
 				(todo) => todo.engKey !== engKey
 			);
 
@@ -177,6 +190,9 @@ const mainSlice = createSlice({
 			} else {
 				state.todo[rusKey] = reducedToDoSynonyms;
 			}
+
+			const isGameFinished = Object.keys(state.todo).length === 0;
+			state.isGameFinished = isGameFinished;
 
 			if (state.mode === Mode.Advanced) {
 				return;
@@ -193,11 +209,6 @@ const mainSlice = createSlice({
 
 			if (!isEngKeyAlreadySucceed) {
 				state.succeed[rusKey].push(engKey);
-			}
-
-			const isGameFinished = Object.keys(state.todo).length === 0;
-			if (isGameFinished) {
-				setIsGameFinished({ isFinished: true });
 			}
 		},
 	},

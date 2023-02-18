@@ -1,29 +1,41 @@
 import { useSelector } from 'react-redux';
 import { RootState } from '../store';
 import { useUpdateIndex } from './useUpdateIndex';
-import { useLayoutEffect, useMemo, useRef } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 
 export const useWord = () => {
-	const { todo, all, succeed } = useSelector((state: RootState) => state);
+	const { todo, all, succeed, favorite } = useSelector(
+		(state: RootState) => state
+	);
+
+	useEffect(() => {
+		// TODO: 1 excessive update at start
+		updateWord();
+	}, [todo]);
+
 	const { currentIndex, updateIndex } = useUpdateIndex();
 
-	const maxIndex = Object.keys(todo).length - 1;
-	const updateWord = () => updateIndex(maxIndex);
+	const updateWord = () => {
+		const maxIndex = Object.keys(todo).length;
+		updateIndex(maxIndex);
+	};
 
 	const currentWord = useMemo(() => {
 		const rusKey = Object.keys(todo).sort()[currentIndex];
+		const engKey = todo[rusKey][0].engKey;
 
-		if (!rusKey) {
-			return null;
-		}
+		const isFavorite = Boolean(
+			favorite[rusKey] && favorite[rusKey].includes(engKey)
+		);
 
 		return {
 			rusKey: rusKey,
-			engKey: todo[rusKey][0].engKey,
+			engKey: engKey,
 			engContext: todo[rusKey][0].engContext,
 			rusContext: todo[rusKey][0].rusContext,
+			isFavorite: isFavorite,
 		};
-	}, [currentIndex]);
+	}, [favorite, currentIndex]);
 
 	const checkWord = (value: string) => {
 		if (!currentWord) {
@@ -33,20 +45,13 @@ export const useWord = () => {
 		return {
 			isCorrectAnswer: value === currentWord.engKey,
 			isPartiallyCorrect: currentWord.engKey.includes(value),
-			synonym: {
-				isSynonym: Boolean(
-					all[currentWord.rusKey].find(
-						(item) => item.engKey === value
-					)
-				),
-				isSynonymAlreadySucceed: succeed[currentWord.rusKey]?.find(
-					(engKey) => engKey === value
-				),
-			},
+			isSynonym: Boolean(
+				all[currentWord.rusKey]?.find((item) => item.engKey === value)
+			),
 		};
 	};
 
-	const prevWord = useRef<typeof currentWord>(null);
+	const prevWord = useRef<typeof currentWord>();
 
 	useLayoutEffect(() => {
 		if (!prevWord.current || !currentWord) {
@@ -54,7 +59,6 @@ export const useWord = () => {
 		}
 
 		if (prevWord.current.engKey === currentWord.engKey) {
-			console.log('update');
 			updateWord();
 			prevWord.current = currentWord;
 		}

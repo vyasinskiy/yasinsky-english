@@ -1,13 +1,16 @@
 import { useState } from 'react';
-import { getRandomInt } from './helpers';
+import { getRandomIndex } from './helpers';
 
 export function useUpdateIndex() {
 	const [currentIndex, setCurrentIndex] = useState<number>(0);
 
 	const updateIndex = (maxIndex: number) => {
-		const excludeInt = currentIndex !== 0 ? currentIndex : null;
-		const newIndex = getRandomInt(maxIndex, excludeInt);
-		setCurrentIndex(newIndex);
+		const newIndex = getRandomIndex(maxIndex, currentIndex);
+
+		// TODO: typeof is not safe check
+		if (typeof newIndex === 'number') {
+			setCurrentIndex(newIndex);
+		}
 	};
 
 	return { currentIndex, updateIndex };

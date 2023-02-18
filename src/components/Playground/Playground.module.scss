@@ -1,13 +1,3 @@
-body {
-	width: 100vw;
-	height: 100vh;
-	margin: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #e7ebf127;
-}
-
 .wrapper {
 	width: 70vw;
 	max-width: 400px;
@@ -26,6 +16,10 @@ body {
 .title {
 	display: inline-block;
 	position: relative;
+
+	&:hover {
+		cursor: default;
+	}
 
 	.favoriteIcon {
 		position: absolute;
@@ -56,6 +50,6 @@ body {
 }
 
 .help {
-	cursor: pointer;
+	cursor: default;
 	font-weight: bold;
 }
