@@ -2,6 +2,8 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../store';
 import { useUpdateIndex } from './useUpdateIndex';
 import { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
+import { saveProgressToLocalStorage } from './helpers';
+import { useIsFirstRender } from './useIsFirstRender';
 
 export const useWord = () => {
 	const { todo, all, succeed, favorite } = useSelector(
@@ -52,9 +54,10 @@ export const useWord = () => {
 	};
 
 	const prevWord = useRef<typeof currentWord>();
+	const isFirst = useIsFirstRender();
 
 	useLayoutEffect(() => {
-		if (!prevWord.current || !currentWord) {
+		if (isFirst || !prevWord.current || !currentWord) {
 			return;
 		}
 
@@ -63,6 +66,14 @@ export const useWord = () => {
 			prevWord.current = currentWord;
 		}
 	}, [currentIndex]);
+
+	useEffect(() => {
+		if (isFirst) {
+			return;
+		}
+
+		saveProgressToLocalStorage(succeed, favorite);
+	}, [succeed, favorite]);
 
 	return { currentWord, updateWord, checkWord };
 };

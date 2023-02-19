@@ -1,43 +1,30 @@
-import * as React from 'react';
-import { useState, useEffect, FormEvent, ChangeEvent } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
+import { useState, FormEvent, ChangeEvent } from 'react';
 import {
 	Button,
 	Divider,
 	List,
 	ListItem,
-	Snackbar,
 	TextField,
 	Tooltip,
 } from '@mui/material';
 
 import cn from 'classnames';
 
-import {
-	useAppDispatch,
-	setAsSucceed,
-	setAsFavorite,
-	RootState,
-} from '../../store';
+import { useAppDispatch, setAsSucceed, setAsFavorite } from '../../store';
 
-import { saveProgressToLocalStorage } from '../../hooks/helpers';
 import { useWord } from '../../hooks/useWord';
 
 import { ReactComponent as FavoriteIcon } from '../../assets/icons/favorite.svg';
 import styles from './Playground.module.scss';
+import { SnackBar } from '../SnackBar';
 
 export function Playground() {
 	const dispatch = useAppDispatch();
 	const [value, setValue] = useState<string>('');
 	const [error, setError] = useState<string>('');
 	const [showHelp, setShowHelp] = useState<boolean>(false);
-	const [isSnackBarOpen, setIsSnackBarOpen] = useState(false);
 	const [synonymsSelected, setSynonymsSelected] = useState<string[]>([]);
-	const { succeed, favorite } = useSelector((state: RootState) => state);
-
-	useEffect(() => {
-		saveProgressToLocalStorage(succeed, favorite);
-	}, [succeed]);
 
 	const { currentWord, updateWord, checkWord } = useWord();
 
@@ -63,7 +50,6 @@ export function Playground() {
 		const { isCorrectAnswer, isPartiallyCorrect, isSynonym } = checkResult;
 
 		if (isCorrectAnswer) {
-			setIsSnackBarOpen(true);
 			onReset();
 			setSynonymsSelected([]);
 
@@ -199,12 +185,7 @@ export function Playground() {
 					<span className={styles.help}>{engKey}</span>
 				</Tooltip>
 			)}
-			<Snackbar
-				open={isSnackBarOpen}
-				onClose={() => setIsSnackBarOpen(false)}
-				autoHideDuration={2000}
-				message={`Succeed words: ${Object.keys(succeed).length}`}
-			/>
+			<SnackBar />
 		</div>
 	);
 }
