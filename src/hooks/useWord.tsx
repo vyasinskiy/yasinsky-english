@@ -10,16 +10,13 @@ export const useWord = () => {
 		(state: RootState) => state
 	);
 
-	useEffect(() => {
-		// TODO: 1 excessive update at start
-		updateWord();
-	}, [todo]);
+	const isFirst = useIsFirstRender();
 
 	const { currentIndex, updateIndex } = useUpdateIndex();
 
 	const updateWord = () => {
 		const maxIndex = Object.keys(todo).length;
-		updateIndex(maxIndex);
+		updateIndex(maxIndex - 1);
 	};
 
 	const currentWord = useMemo(() => {
@@ -36,8 +33,28 @@ export const useWord = () => {
 			engContext: todo[rusKey][0].engContext,
 			rusContext: todo[rusKey][0].rusContext,
 			isFavorite: isFavorite,
+			isLast: Object.keys(todo).length === 1,
 		};
 	}, [favorite, currentIndex]);
+
+	useEffect(() => {
+		if (isFirst) {
+			return;
+		}
+
+		const isCurrentWordDone = Boolean(
+			!todo[currentWord.rusKey] ||
+				todo[currentWord.rusKey].findIndex(
+					(synonym) => synonym.engKey === currentWord.engKey
+				) === -1
+		);
+
+		if (!isCurrentWordDone) {
+			return;
+		}
+
+		updateWord();
+	}, [todo]);
 
 	const checkWord = (value: string) => {
 		if (!currentWord) {
@@ -54,7 +71,6 @@ export const useWord = () => {
 	};
 
 	const prevWord = useRef<typeof currentWord>();
-	const isFirst = useIsFirstRender();
 
 	useLayoutEffect(() => {
 		if (isFirst || !prevWord.current || !currentWord) {

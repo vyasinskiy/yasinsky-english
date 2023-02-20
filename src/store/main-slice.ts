@@ -30,7 +30,7 @@ function isTranslationsData(data: unknown): data is MapRusKeyToEngKeys {
 }
 
 function isModeData(data: unknown): data is Mode {
-	return !!data && (data === Mode.Ordinary || data === Mode.Advanced);
+	return !!data && (data === Mode.Ordinary || data === Mode.Favorite);
 }
 
 function getAdvancedData(favorite: MapRusKeyToEngKeys) {
@@ -73,7 +73,7 @@ const lazyInitialize = (): MainState => {
 		all: mapRusKeyToSynonyms,
 		favorite: {},
 		isGameFinished: false,
-		mode: Mode.Ordinary,
+		mode: Mode.Favorite,
 		succeed: {},
 		todo: {},
 	};
@@ -98,7 +98,7 @@ const lazyInitialize = (): MainState => {
 	// 	state.mode = isModeData(modeData) ? modeData : Mode.Ordinary;
 	// }
 
-	if (state.mode === Mode.Advanced) {
+	if (state.mode === Mode.Favorite) {
 		state.todo = getAdvancedData(state.favorite);
 	} else {
 		const todo = Object.keys(mapRusKeyToSynonyms).reduce((acc, rusKey) => {
@@ -194,7 +194,7 @@ const mainSlice = createSlice({
 			const isGameFinished = Object.keys(state.todo).length === 0;
 			state.isGameFinished = isGameFinished;
 
-			if (state.mode === Mode.Advanced) {
+			if (state.mode === Mode.Favorite) {
 				return;
 			}
 

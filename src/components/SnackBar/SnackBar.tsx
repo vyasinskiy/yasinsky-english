@@ -12,7 +12,7 @@ export const SnackBar = () => {
 	const isFirst = useIsFirstRender();
 
 	useEffect(() => {
-		if (isFirst || mode === Mode.Advanced) {
+		if (isFirst || mode === Mode.Favorite) {
 			return;
 		}
 

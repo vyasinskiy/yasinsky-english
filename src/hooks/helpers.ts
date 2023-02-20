@@ -2,17 +2,18 @@ import { MapRusKeyToEngKeys } from '../assets/types';
 
 const MAX_CONSTRAINT_INT = 30;
 
-export function getRandomIndex(
-	arrayLength: number,
-	excludeIndex?: number
-): number | undefined {
-	if (arrayLength === 1 && excludeIndex === 0) {
-		return;
+export function getRandomInt(maxInt: number, excludeInt?: number) {
+	if (maxInt === 0) {
+		return 0;
+	}
+
+	if (maxInt === 1 && excludeInt === 1) {
+		return NaN;
 	}
 
 	let randomIndex = getRandom() * getRandom();
 
-	while (!isAcceptableInteger(randomIndex, arrayLength - 1, excludeIndex)) {
+	while (!isAcceptableInteger(randomIndex, maxInt, excludeInt)) {
 		randomIndex = getRandom() * getRandom();
 	}
 
@@ -24,15 +25,21 @@ export function isAcceptableInteger(
 	maxInt: number,
 	excludeInt?: number
 ) {
+	// const isZeroAccepted = maxInt === 0;
+
+	// if (isZeroAccepted && checkInt === 0) {
+	// 	return true;
+	// }
+
 	return Boolean(
 		checkInt !== excludeInt &&
 			checkInt <= maxInt &&
-			checkInt < MAX_CONSTRAINT_INT
+			checkInt < MAX_CONSTRAINT_INT &&
+			checkInt !== 0
 	);
 }
 
 function getRandom(): number {
-	// TODO: toFixed(0) never returns 0. At the end of the game it causes infinite loop
 	return +(Math.random() * 10).toFixed(0);
 }
 

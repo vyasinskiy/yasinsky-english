@@ -8,19 +8,30 @@ import {
 	TextField,
 	Tooltip,
 } from '@mui/material';
+import { useSelector } from 'react-redux';
 
 import cn from 'classnames';
 
-import { useAppDispatch, setAsSucceed, setAsFavorite } from '../../store';
+import {
+	useAppDispatch,
+	setAsSucceed,
+	setAsFavorite,
+	RootState,
+} from '../../store';
 
 import { useWord } from '../../hooks/useWord';
 
 import { ReactComponent as FavoriteIcon } from '../../assets/icons/favorite.svg';
 import styles from './Playground.module.scss';
 import { SnackBar } from '../SnackBar';
+import { AdvancedGame } from '../AdvancedGame';
+import { Mode } from '../../assets/types';
 
 export function Playground() {
 	const dispatch = useAppDispatch();
+
+	const mode = useSelector((state: RootState) => state.mode);
+
 	const [value, setValue] = useState<string>('');
 	const [error, setError] = useState<string>('');
 	const [showHelp, setShowHelp] = useState<boolean>(false);
@@ -28,7 +39,8 @@ export function Playground() {
 
 	const { currentWord, updateWord, checkWord } = useWord();
 
-	const { engKey, rusKey, engContext, rusContext, isFavorite } = currentWord;
+	const { engKey, rusKey, engContext, rusContext, isFavorite, isLast } =
+		currentWord;
 
 	const onChange = (event: ChangeEvent<HTMLInputElement>) => {
 		setValue(event.target.value);
@@ -52,11 +64,7 @@ export function Playground() {
 		if (isCorrectAnswer) {
 			onReset();
 			setSynonymsSelected([]);
-
 			dispatch(setAsSucceed({ rusKey, engKey: value }));
-			for (const synonym of synonymsSelected) {
-				dispatch(setAsSucceed({ rusKey, engKey: synonym }));
-			}
 			return;
 		}
 
@@ -71,9 +79,12 @@ export function Playground() {
 
 			const isSynonymAlreadySelected = synonymsSelected.includes(value);
 
-			if (!isSynonymAlreadySelected) {
-				setSynonymsSelected((synonyms) => [...synonyms, value]);
+			if (isSynonymAlreadySelected) {
+				return;
 			}
+
+			setSynonymsSelected((synonyms) => [...synonyms, value]);
+			dispatch(setAsSucceed({ rusKey, engKey: value }));
 
 			return;
 		}
@@ -85,9 +96,6 @@ export function Playground() {
 		dispatch(setAsFavorite({ rusKey, engKey }));
 
 	const onNext = () => {
-		for (const synonym of synonymsSelected) {
-			dispatch(setAsSucceed({ rusKey, engKey: synonym }));
-		}
 		onReset();
 		updateWord();
 	};
@@ -160,6 +168,7 @@ export function Playground() {
 						variant="outlined"
 						fullWidth={true}
 						onClick={onNext}
+						// disabled={isLast}
 					>
 						{showHelp ? 'Next' : 'Skip'}
 					</Button>
@@ -185,6 +194,7 @@ export function Playground() {
 					<span className={styles.help}>{engKey}</span>
 				</Tooltip>
 			)}
+			{mode === Mode.Advanced && <AdvancedGame />}
 			<SnackBar />
 		</div>
 	);

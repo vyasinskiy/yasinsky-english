@@ -28,6 +28,7 @@ export interface MapRusKeyToSynonyms {
 }
 
 export enum Mode {
-	Advanced = 'advanced',
+	Favorite = 'favorite',
 	Ordinary = 'ordinary',
+	Advanced = 'advanced',
 }

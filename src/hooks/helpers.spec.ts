@@ -1,43 +1,33 @@
-import { getRandomIndex, isAcceptableInteger } from './helpers';
+import { getRandomInt, isAcceptableInteger } from './helpers';
 
-describe('Testing getRandomIndex', () => {
-	test('it should return undefined with array length === 0', () => {
-		const arrayLength = 0;
-		expect(getRandomIndex(arrayLength)).not.toBeDefined();
+describe('Testing getRandomInt', () => {
+	test('it should always return 0 with maxInt === 0', () => {
+		const maxInt = 0;
+		expect(getRandomInt(maxInt)).toBe(0);
 	});
-	test('it should return 0 when array length === 1', () => {
-		const arrayLength = 1;
-		expect(getRandomIndex(arrayLength)).toBe(0);
-	});
-	test('it should return 0 when array length === 1', () => {
-		const arrayLength = 1;
-		const excludeInt = 0;
-		expect(getRandomIndex(arrayLength, excludeInt)).toBe(0);
-	});
-	test('it should return 0 when array length === 1', () => {
-		const arrayLength = 1;
+	test('it should return undefined when maxInt === 1 and excludeInt === 1', () => {
+		const maxInt = 1;
 		const excludeInt = 1;
-		expect(getRandomIndex(arrayLength, excludeInt)).toBe(0);
+		expect(getRandomInt(maxInt, excludeInt)).toBeNaN();
 	});
-	test('it should return 1 when array length === 2', () => {
-		const arrayLength = 2;
-		const excludeInt = 1;
-		expect(getRandomIndex(arrayLength, excludeInt)).toBe(1);
+	test('it should avoid to return 0 every time if other positive index exists', () => {
+		const maxInt = 1;
+		expect(getRandomInt(maxInt)).toBe(1);
 	});
-	test('it should return 1 when array length === 3 and exclude digit === 2', () => {
-		const arrayLength = 3;
+	test('it should return 1 when maxInt === 2 and excludeInt === 2', () => {
+		const maxInt = 2;
 		const excludeInt = 2;
-		expect(getRandomIndex(arrayLength, excludeInt)).toBe(1);
+		expect(getRandomInt(maxInt, excludeInt)).toBe(1);
 	});
-	test('it should return 2 when array length === 3 and exclude digit === 1', () => {
-		const arrayLength = 3;
+	test('it should return 2 when maxInt === 2 and excludeInt === 1', () => {
+		const maxInt = 2;
 		const excludeInt = 1;
-		expect(getRandomIndex(arrayLength, excludeInt)).toBe(2);
+		expect(getRandomInt(maxInt, excludeInt)).toBe(2);
 	});
-	test('it should not return exclude digit', () => {
-		const arrayLength = 3;
+	test('it should not return excludeInt', () => {
+		const maxInt = 3;
 		const excludeInt = 1;
-		expect(getRandomIndex(arrayLength, excludeInt)).not.toBe(1);
+		expect(getRandomInt(maxInt, excludeInt)).not.toBe(1);
 	});
 });
 
@@ -53,7 +43,7 @@ describe('Testing isAcceptedInteger', () => {
 		const excludeInt = 1;
 		expect(isAcceptableInteger(checkInt, maxInt, excludeInt)).toBeFalsy();
 	});
-	test('it should return true without exclude integet', () => {
+	test('it should return true without exclude integer', () => {
 		const checkInt = 1;
 		const maxInt = 10;
 		expect(isAcceptableInteger(checkInt, maxInt)).toBeTruthy();
