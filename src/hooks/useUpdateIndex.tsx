@@ -6,10 +6,11 @@ export function useUpdateIndex() {
 
 	// maxIndex must be array length as it is index!
 	const updateIndex = (maxIndex: number) => {
-		let newIndex = getRandomInt(maxIndex - 1, currentIndex);
+		const maxInt = maxIndex - 1;
+		let newIndex = getRandomInt(maxInt, currentIndex);
 
 		while (!isAcceptedIndex(newIndex, maxIndex)) {
-			newIndex = getRandomInt(maxIndex, currentIndex);
+			newIndex = getRandomInt(maxInt, currentIndex);
 		}
 
 		setCurrentIndex(newIndex);
