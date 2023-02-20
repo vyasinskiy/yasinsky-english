@@ -7,10 +7,6 @@ export function getRandomInt(maxInt: number, excludeInt?: number) {
 		return 0;
 	}
 
-	if (maxInt === 1 && excludeInt === 1) {
-		return NaN;
-	}
-
 	let randomIndex = getRandom() * getRandom();
 
 	while (!isAcceptableInteger(randomIndex, maxInt, excludeInt)) {
@@ -25,17 +21,10 @@ export function isAcceptableInteger(
 	maxInt: number,
 	excludeInt?: number
 ) {
-	// const isZeroAccepted = maxInt === 0;
-
-	// if (isZeroAccepted && checkInt === 0) {
-	// 	return true;
-	// }
-
 	return Boolean(
 		checkInt !== excludeInt &&
 			checkInt <= maxInt &&
-			checkInt < MAX_CONSTRAINT_INT &&
-			checkInt !== 0
+			checkInt < MAX_CONSTRAINT_INT
 	);
 }
 

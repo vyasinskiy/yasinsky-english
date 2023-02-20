@@ -14,10 +14,7 @@ export const useWord = () => {
 
 	const { currentIndex, updateIndex } = useUpdateIndex();
 
-	const updateWord = () => {
-		const maxIndex = Object.keys(todo).length;
-		updateIndex(maxIndex - 1);
-	};
+	const updateWord = () => updateIndex(Object.keys(todo).length);
 
 	const currentWord = useMemo(() => {
 		const rusKey = Object.keys(todo).sort()[currentIndex];

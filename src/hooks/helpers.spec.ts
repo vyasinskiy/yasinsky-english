@@ -5,27 +5,13 @@ describe('Testing getRandomInt', () => {
 		const maxInt = 0;
 		expect(getRandomInt(maxInt)).toBe(0);
 	});
-	test('it should return undefined when maxInt === 1 and excludeInt === 1', () => {
+	test('it should return 0 when maxInt === 1 and excludeInt === 1', () => {
 		const maxInt = 1;
 		const excludeInt = 1;
-		expect(getRandomInt(maxInt, excludeInt)).toBeNaN();
-	});
-	test('it should avoid to return 0 every time if other positive index exists', () => {
-		const maxInt = 1;
-		expect(getRandomInt(maxInt)).toBe(1);
-	});
-	test('it should return 1 when maxInt === 2 and excludeInt === 2', () => {
-		const maxInt = 2;
-		const excludeInt = 2;
-		expect(getRandomInt(maxInt, excludeInt)).toBe(1);
-	});
-	test('it should return 2 when maxInt === 2 and excludeInt === 1', () => {
-		const maxInt = 2;
-		const excludeInt = 1;
-		expect(getRandomInt(maxInt, excludeInt)).toBe(2);
+		expect(getRandomInt(maxInt, excludeInt)).toBe(0);
 	});
 	test('it should not return excludeInt', () => {
-		const maxInt = 3;
+		const maxInt = 1;
 		const excludeInt = 1;
 		expect(getRandomInt(maxInt, excludeInt)).not.toBe(1);
 	});
