@@ -4,12 +4,11 @@ import { getRandomInt } from './helpers';
 export function useUpdateIndex() {
 	const [currentIndex, setCurrentIndex] = useState<number>(1);
 
-	// maxIndex must be array length as it is index!
-	const updateIndex = (maxIndex: number) => {
-		const maxInt = maxIndex - 1;
+	const updateIndex = (arrayLength: number) => {
+		const maxInt = arrayLength - 1;
 		let newIndex = getRandomInt(maxInt, currentIndex);
 
-		while (!isAcceptedIndex(newIndex, maxIndex)) {
+		while (!isAcceptedIndex(newIndex, arrayLength)) {
 			newIndex = getRandomInt(maxInt, currentIndex);
 		}
 
