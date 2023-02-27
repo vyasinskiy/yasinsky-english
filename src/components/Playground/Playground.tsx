@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState, FormEvent, ChangeEvent } from 'react';
+import React, { SyntheticEvent, useEffect, useRef } from 'react';
+import { useState, ChangeEvent } from 'react';
 import {
 	Button,
 	Divider,
@@ -35,6 +35,7 @@ export function Playground() {
 	const [value, setValue] = useState<string>('');
 	const [error, setError] = useState<string>('');
 	const [showHelp, setShowHelp] = useState<boolean>(false);
+	const [showAdvanced, setShowAdvanced] = useState<boolean>(false);
 	const [synonymsSelected, setSynonymsSelected] = useState<string[]>([]);
 
 	const { currentWord, updateWord, checkWord } = useWord();
@@ -42,11 +43,19 @@ export function Playground() {
 	const { engKey, rusKey, engContext, rusContext, isFavorite, isLast } =
 		currentWord;
 
+	const advancedInputRef = useRef<HTMLInputElement>();
+
+	useEffect(() => {
+		if (advancedInputRef.current) {
+			advancedInputRef.current.focus();
+		}
+	}, [showAdvanced]);
+
 	const onChange = (event: ChangeEvent<HTMLInputElement>) => {
 		setValue(event.target.value);
 	};
 
-	const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+	const handleCheck = (event: SyntheticEvent) => {
 		event.preventDefault();
 
 		if (value === '') {
@@ -62,8 +71,14 @@ export function Playground() {
 		const { isCorrectAnswer, isPartiallyCorrect, isSynonym } = checkResult;
 
 		if (isCorrectAnswer) {
+			setError('');
+
+			if (mode === Mode.Advanced && !showAdvanced) {
+				setShowAdvanced(true);
+				return;
+			}
+
 			onReset();
-			setSynonymsSelected([]);
 			dispatch(setAsSucceed({ rusKey, engKey: value }));
 			return;
 		}
@@ -104,6 +119,7 @@ export function Playground() {
 		setValue('');
 		setError('');
 		setSynonymsSelected([]);
+		setShowAdvanced(false);
 		setShowHelp(false);
 	};
 
@@ -129,60 +145,60 @@ export function Playground() {
 				/>
 			</h1>
 
-			<form onSubmit={handleSubmit}>
+			<form className={styles.form} onSubmit={handleCheck}>
 				<TextField
-					autoFocus={true}
 					autoComplete="off"
-					className={styles.verticalShift}
 					color="primary"
-					onChange={onChange}
-					value={value}
 					fullWidth={true}
 					label="Type your answer"
 					variant="outlined"
-					error={Boolean(error)}
 					helperText={error}
-					disabled={showHelp}
+					autoFocus={true}
+					className={styles.verticalOffset}
+					onChange={onChange}
+					value={value}
+					error={Boolean(error)}
+					disabled={showHelp || showAdvanced}
 				/>
 				<Button
-					className={styles.verticalShift}
+					className={styles.verticalOffset}
 					variant="contained"
 					fullWidth={true}
 					type="submit"
-					disabled={showHelp}
+					disabled={showHelp || showAdvanced}
 				>
 					Answer
 				</Button>
 				<div className={styles.helpButtons}>
 					<Button
-						className={styles.verticalShift}
 						variant="outlined"
 						fullWidth={true}
 						onClick={onHelp}
-						disabled={showHelp}
+						disabled={showHelp || showAdvanced}
 					>
 						Help
 					</Button>
 					<Button
-						className={styles.verticalShift}
 						variant="outlined"
 						fullWidth={true}
 						onClick={onNext}
-						// disabled={isLast}
+						disabled={isLast || showAdvanced}
 					>
 						{showHelp ? 'Next' : 'Skip'}
 					</Button>
 				</div>
 			</form>
 
-			<List className={styles.synonyms}>
-				{synonymsSelected.map((synonym) => (
-					<React.Fragment key={synonym}>
-						<ListItem>{synonym}</ListItem>
-						<Divider />
-					</React.Fragment>
-				))}
-			</List>
+			{synonymsSelected.length > 0 && (
+				<List className={cn(styles.synonyms, styles.verticalOffset)}>
+					{synonymsSelected.map((synonym) => (
+						<React.Fragment key={synonym}>
+							<ListItem>{synonym}</ListItem>
+							<Divider />
+						</React.Fragment>
+					))}
+				</List>
+			)}
 
 			{showHelp && (
 				<Tooltip
@@ -194,7 +210,15 @@ export function Playground() {
 					<span className={styles.help}>{engKey}</span>
 				</Tooltip>
 			)}
-			{mode === Mode.Advanced && <AdvancedGame />}
+
+			{mode === Mode.Advanced && showAdvanced && (
+				<AdvancedGame
+					inputRef={advancedInputRef}
+					rusContext={rusContext}
+					engContext={engContext}
+					onCheck={handleCheck}
+				/>
+			)}
 			<SnackBar />
 		</div>
 	);

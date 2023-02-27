@@ -6,7 +6,9 @@ import { Playground } from './components/Playground/Playground';
 import './index.scss';
 
 function App() {
-	const { isGameFinished } = useSelector((state: RootState) => state);
+	const isGameFinished = useSelector(
+		(state: RootState) => state.isGameFinished
+	);
 
 	return isGameFinished ? 'Game finished' : <Playground />;
 }

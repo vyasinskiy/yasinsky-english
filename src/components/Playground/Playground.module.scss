@@ -1,16 +1,17 @@
+@import 'src/assets/scss/pallete.scss';
+
 .wrapper {
-	width: 70vw;
+	margin: 100px auto 0;
 	max-width: 400px;
-	height: 70vh;
 	text-align: center;
 
-	& .verticalShift {
+	& .verticalOffset {
 		margin-bottom: 10px;
 	}
+}
 
-	.error {
-		color: red;
-	}
+.form {
+	margin-bottom: 20px;
 }
 
 .title {
@@ -26,8 +27,9 @@
 		top: 0;
 		right: -24px;
 		cursor: pointer;
+
 		&.active {
-			color: #1976d2;
+			color: $color-active;
 		}
 	}
 }
@@ -52,4 +54,8 @@
 .help {
 	cursor: default;
 	font-weight: bold;
+}
+
+.error {
+	color: $color-danger;
 }

@@ -1,9 +1,9 @@
 body {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	min-height: 100vh;
 	margin: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #e7ebf127;
+}
+
+#root {
+	min-height: 100vh;
 }
