@@ -8,7 +8,7 @@ export function useUpdateIndex() {
 		const maxIndex = arrayLength - 1;
 		let newIndex = getRandomInt(maxIndex, currentIndex);
 
-		while (!isAcceptedIndex(newIndex, maxIndex)) {
+		while (!isAcceptedIndex(currentIndex, newIndex, maxIndex)) {
 			newIndex = getRandomInt(maxIndex, currentIndex);
 		}
 
@@ -18,8 +18,18 @@ export function useUpdateIndex() {
 	return { currentIndex, updateIndex };
 }
 
-function isAcceptedIndex(index: number, maxIndex: number) {
-	// we must avoid index === 0 to proceed to rerender after index update
+function isAcceptedIndex(
+	currentIndex: number,
+	newIndex: number,
+	maxIndex: number
+) {
+	const acceptedAsLastWord = newIndex === 0 && maxIndex === 0;
+	const acceptedAsSecondToLast =
+		currentIndex === 1 && newIndex === 0 && maxIndex === 1;
+	// we must avoid index === 0 to proceed with rerender after index update
 	// as at the end of the game index may be changed from 0 => 0 withour rerender
-	return Boolean((index === 0 && maxIndex === 0) || index !== 0);
+	const acceptedAsNotZero =
+		!acceptedAsLastWord && !acceptedAsSecondToLast && newIndex !== 0;
+
+	return acceptedAsLastWord || acceptedAsSecondToLast || acceptedAsNotZero;
 }

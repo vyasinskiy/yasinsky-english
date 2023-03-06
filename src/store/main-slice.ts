@@ -73,7 +73,7 @@ const lazyInitialize = (): MainState => {
 		all: mapRusKeyToSynonyms,
 		favorite: {},
 		isGameFinished: false,
-		mode: Mode.Advanced,
+		mode: Mode.Ordinary,
 		succeed: {},
 		todo: {},
 	};

@@ -85,6 +85,7 @@ export const useWord = () => {
 			return;
 		}
 
+		// TODO: use cleanup to save progress only at the end of the game
 		saveProgressToLocalStorage(succeed, favorite);
 	}, [succeed, favorite]);
 
