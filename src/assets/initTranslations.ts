@@ -1,4 +1,5 @@
-import json from './translations.json';
+// import json from './translations.json';
+import json from './translations-es.json';
 import { MapRusKeyToSynonyms, Word } from './types';
 
 function isWordsArray(json: unknown): json is Word[] {
@@ -19,7 +20,7 @@ function isWordsArray(json: unknown): json is Word[] {
 
 export const translations = isWordsArray(json)
 	? json
-			.filter((translation) => translation['Search language'] === 'en')
+			// .filter((translation) => translation['Search language'] === 'en')
 			.map((translation) => ({
 				...translation,
 				['Translation text']:
