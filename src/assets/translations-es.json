@@ -866,38 +866,6 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "y",
-    "Translation text": "и",
-    "Search example": "",
-    "Translation example": ""
-  },
-  {
-    "Search language": "es",
-    "Translation language": "ru",
-    "Search text": "o",
-    "Translation text": "или",
-    "Search example": "",
-    "Translation example": ""
-  },
-  {
-    "Search language": "es",
-    "Translation language": "ru",
-    "Search text": "sino",
-    "Translation text": "а",
-    "Search example": "",
-    "Translation example": ""
-  },
-  {
-    "Search language": "es",
-    "Translation language": "ru",
-    "Search text": "ni",
-    "Translation text": "ни",
-    "Search example": "",
-    "Translation example": ""
-  },
-  {
-    "Search language": "es",
-    "Translation language": "ru",
     "Search text": "blanco",
     "Translation text": "белый",
     "Search example": "",
@@ -1116,14 +1084,6 @@
     "Translation language": "ru",
     "Search text": "estrecho",
     "Translation text": "узкий",
-    "Search example": "",
-    "Translation example": ""
-  },
-  {
-    "Search language": "es",
-    "Translation language": "ru",
-    "Search text": "",
-    "Translation text": "",
     "Search example": "",
     "Translation example": ""
   },
@@ -2338,8 +2298,8 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "ноль",
-    "Translation text": "cero",
+    "Search text": "cero",
+    "Translation text": "ноль",
     "Search example": "",
     "Translation example": ""
   },
@@ -2434,784 +2394,784 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "одиннадцать",
-    "Translation text": "once",
+    "Search text": "once",
+    "Translation text": "одиннадцать",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "двенадцать",
-    "Translation text": "doce",
+    "Search text": "doce",
+    "Translation text": "двенадцать",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "тренадцать",
-    "Translation text": "trece",
+    "Search text": "trece",
+    "Translation text": "тренадцать",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "четырнадцать",
-    "Translation text": "catorce",
+    "Search text": "catorce",
+    "Translation text": "четырнадцать",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "пятнадцать",
-    "Translation text": "quince",
+    "Search text": "quince",
+    "Translation text": "пятнадцать",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "шестнадцать",
-    "Translation text": "dieciseis",
+    "Search text": "dieciseis",
+    "Translation text": "шестнадцать",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "семнадцать",
-    "Translation text": "diecisiete",
+    "Search text": "diecisiete",
+    "Translation text": "семнадцать",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "восемнадцать",
-    "Translation text": "dieciocho",
+    "Search text": "dieciocho",
+    "Translation text": "восемнадцать",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "девятнадцать",
-    "Translation text": "diecinueve",
+    "Search text": "diecinueve",
+    "Translation text": "девятнадцать",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "двадцать",
-    "Translation text": "veinte",
+    "Search text": "veinte",
+    "Translation text": "двадцать",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "еда",
-    "Translation text": "la comida",
+    "Search text": "la comida",
+    "Translation text": "еда",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "деревня",
-    "Translation text": "el pueblo",
+    "Search text": "el pueblo",
+    "Translation text": "деревня",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "язык",
-    "Translation text": "la lengua",
+    "Search text": "la lengua",
+    "Translation text": "язык",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "аптека",
-    "Translation text": "la farmacia",
+    "Search text": "la farmacia",
+    "Translation text": "аптека",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "игра",
-    "Translation text": "el juego",
+    "Search text": "el juego",
+    "Translation text": "игра",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "парикмахерская",
-    "Translation text": "la peluqueria",
+    "Search text": "la peluqueria",
+    "Translation text": "парикмахерская",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "снег",
-    "Translation text": "la nieve",
+    "Search text": "la nieve",
+    "Translation text": "снег",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "аэропорт",
-    "Translation text": "el aeropuerto",
+    "Search text": "el aeropuerto",
+    "Translation text": "аэропорт",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "добро пожаловать",
-    "Translation text": "bienvenidas",
+    "Search text": "bienvenidas",
+    "Translation text": "добро пожаловать",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "здание",
-    "Translation text": "el edificio",
+    "Search text": "el edificio",
+    "Translation text": "здание",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "пять этажей",
-    "Translation text": "cinco plantas",
+    "Search text": "cinco plantas",
+    "Translation text": "пять этажей",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "комната освещенная",
-    "Translation text": "la habitacion es luminosa",
+    "Search text": "la habitacion es luminosa",
+    "Translation text": "комната освещенная",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "вещь",
-    "Translation text": "la cosa",
+    "Search text": "la cosa",
+    "Translation text": "вещь",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "много вещей",
-    "Translation text": "muchas cosas",
+    "Search text": "muchas cosas",
+    "Translation text": "много вещей",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "кроме того",
-    "Translation text": "ademas",
+    "Search text": "ademas",
+    "Translation text": "кроме того",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "сейчас",
-    "Translation text": "ahora",
+    "Search text": "ahora",
+    "Translation text": "сейчас",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "обычно",
-    "Translation text": "normalmente",
+    "Search text": "normalmente",
+    "Translation text": "обычно",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "убрана",
-    "Translation text": "esta ordenada",
+    "Search text": "esta ordenada",
+    "Translation text": "убрана",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "не убрана (беспорядок)",
-    "Translation text": "esta desordenada",
+    "Search text": "esta desordenada",
+    "Translation text": "не убрана (беспорядок)",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "место",
-    "Translation text": "el lugar",
+    "Search text": "el lugar",
+    "Translation text": "место",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "любимый",
-    "Translation text": "favorito",
+    "Search text": "favorito",
+    "Translation text": "любимый",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "особенно",
-    "Translation text": "especialmente",
+    "Search text": "especialmente",
+    "Translation text": "особенно",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "странно",
-    "Translation text": "extrano",
+    "Search text": "extrano",
+    "Translation text": "странно",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "мебель",
-    "Translation text": "el mueble",
+    "Search text": "el mueble",
+    "Translation text": "мебель",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "одежда",
-    "Translation text": "la ropa",
+    "Search text": "la ropa",
+    "Translation text": "одежда",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "вкусный",
-    "Translation text": "rico",
+    "Search text": "rico",
+    "Translation text": "вкусный",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "мой",
-    "Translation text": "mi",
+    "Search text": "mi",
+    "Translation text": "мой",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "твой",
-    "Translation text": "tu",
+    "Search text": "tu",
+    "Translation text": "твой",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "его",
-    "Translation text": "su",
+    "Search text": "su",
+    "Translation text": "его",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "наш",
-    "Translation text": "nuestro",
+    "Search text": "nuestro",
+    "Translation text": "наш",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "ваш",
-    "Translation text": "vuestro",
+    "Search text": "vuestro",
+    "Translation text": "ваш",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "их",
-    "Translation text": "su",
+    "Search text": "su",
+    "Translation text": "их",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "вор",
-    "Translation text": "el ladron",
+    "Search text": "el ladron",
+    "Translation text": "вор",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "офис",
-    "Translation text": "la oficina",
+    "Search text": "la oficina",
+    "Translation text": "офис",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "дедушка",
-    "Translation text": "el abuelo",
+    "Search text": "el abuelo",
+    "Translation text": "дедушка",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "бабушка",
-    "Translation text": "la abuela",
+    "Search text": "la abuela",
+    "Translation text": "бабушка",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "начальник",
-    "Translation text": "el jefe",
+    "Search text": "el jefe",
+    "Translation text": "начальник",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "брат",
-    "Translation text": "el hermano",
+    "Search text": "el hermano",
+    "Translation text": "брат",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "жених",
-    "Translation text": "el novio",
+    "Search text": "el novio",
+    "Translation text": "жених",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "родной язык",
-    "Translation text": "el idioma natal",
+    "Search text": "el idioma natal",
+    "Translation text": "родной язык",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "жизнь",
-    "Translation text": "la vida",
+    "Search text": "la vida",
+    "Translation text": "жизнь",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "юбка",
-    "Translation text": "la falda",
+    "Search text": "la falda",
+    "Translation text": "юбка",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "идея",
-    "Translation text": "la idea",
+    "Search text": "la idea",
+    "Translation text": "идея",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "план",
-    "Translation text": "el plan",
+    "Search text": "el plan",
+    "Translation text": "план",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "внук",
-    "Translation text": "el nieto",
+    "Search text": "el nieto",
+    "Translation text": "внук",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "бабушка и дедушка (вместе)",
-    "Translation text": "los abuelos",
+    "Search text": "los abuelos",
+    "Translation text": "бабушка и дедушка (вместе)",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "скелет",
-    "Translation text": "el esqueleto",
+    "Search text": "el esqueleto",
+    "Translation text": "скелет",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "бутылка",
-    "Translation text": "la botella",
+    "Search text": "la botella",
+    "Translation text": "бутылка",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "легкий",
-    "Translation text": "facil",
+    "Search text": "facil",
+    "Translation text": "легкий",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "куртка",
-    "Translation text": "cazadora",
+    "Search text": "cazadora",
+    "Translation text": "куртка",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "когда?",
-    "Translation text": "cuando",
+    "Search text": "cuando",
+    "Translation text": "когда?",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "сложный",
-    "Translation text": "dificil",
+    "Search text": "dificil",
+    "Translation text": "сложный",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "суп",
-    "Translation text": "la sopa",
+    "Search text": "la sopa",
+    "Translation text": "суп",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "холодный",
-    "Translation text": "frio",
+    "Search text": "frio",
+    "Translation text": "холодный",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "пол",
-    "Translation text": "el suelo",
+    "Search text": "el suelo",
+    "Translation text": "пол",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "чистый",
-    "Translation text": "limpio",
+    "Search text": "limpio",
+    "Translation text": "чистый",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "радостный",
-    "Translation text": "alegre",
+    "Search text": "alegre",
+    "Translation text": "радостный",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "горячий",
-    "Translation text": "caliente",
+    "Search text": "caliente",
+    "Translation text": "горячий",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "грязный",
-    "Translation text": "sucio",
+    "Search text": "sucio",
+    "Translation text": "грязный",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "счастливый",
-    "Translation text": "feliz",
+    "Search text": "feliz",
+    "Translation text": "счастливый",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "грустный",
-    "Translation text": "triste",
+    "Search text": "triste",
+    "Translation text": "грустный",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "здоровый",
-    "Translation text": "sano",
+    "Search text": "sano",
+    "Translation text": "здоровый",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "больной",
-    "Translation text": "enferno",
+    "Search text": "enferno",
+    "Translation text": "больной",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "спокойный",
-    "Translation text": "tranquilo",
+    "Search text": "tranquilo",
+    "Translation text": "спокойный",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "беспокойный",
-    "Translation text": "nervioso",
+    "Search text": "nervioso",
+    "Translation text": "беспокойный",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "уверенный",
-    "Translation text": "seguro",
+    "Search text": "seguro",
+    "Translation text": "уверенный",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "довольный",
-    "Translation text": "contento",
+    "Search text": "contento",
+    "Translation text": "довольный",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "полный",
-    "Translation text": "lleno",
+    "Search text": "lleno",
+    "Translation text": "полный",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "пустой",
-    "Translation text": "vacio",
+    "Search text": "vacio",
+    "Translation text": "пустой",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "свободный",
-    "Translation text": "libre",
+    "Search text": "libre",
+    "Translation text": "свободный",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "готовый",
-    "Translation text": "preparado",
+    "Search text": "preparado",
+    "Translation text": "готовый",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "уставший",
-    "Translation text": "cansado",
+    "Search text": "cansado",
+    "Translation text": "уставший",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "занятый",
-    "Translation text": "ocupado",
+    "Search text": "ocupado",
+    "Translation text": "занятый",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "открытый",
-    "Translation text": "abierto",
+    "Search text": "abierto",
+    "Translation text": "открытый",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "написанный",
-    "Translation text": "escrito",
+    "Search text": "escrito",
+    "Translation text": "написанный",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "сделанный",
-    "Translation text": "hecho",
+    "Search text": "hecho",
+    "Translation text": "сделанный",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "ребята",
-    "Translation text": "los tios",
+    "Search text": "los tios",
+    "Translation text": "ребята",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "таксист",
-    "Translation text": "el taxista",
+    "Search text": "el taxista",
+    "Translation text": "таксист",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "сумасшедший",
-    "Translation text": "loco",
+    "Search text": "loco",
+    "Translation text": "сумасшедший",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "меодсестра",
-    "Translation text": "enfermera",
+    "Search text": "enfermera",
+    "Translation text": "меодсестра",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "какой час?",
-    "Translation text": "que hora es",
+    "Search text": "que hora es",
+    "Translation text": "какой час?",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "час дня",
-    "Translation text": "es la una",
+    "Search text": "es la una",
+    "Translation text": "час дня",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "два часа дня",
-    "Translation text": "son las dos",
+    "Search text": "son las dos",
+    "Translation text": "два часа дня",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "в точности (точно)",
-    "Translation text": "en punto",
+    "Search text": "en punto",
+    "Translation text": "в точности (точно)",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "десять часов пять минут",
-    "Translation text": "son las diez y cinco",
+    "Search text": "son las diez y cinco",
+    "Translation text": "десять часов пять минут",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "шесть часов пятнадцать минут",
-    "Translation text": "son las seis y cuarto",
+    "Search text": "son las seis y cuarto",
+    "Translation text": "шесть часов пятнадцать минут",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "семь часов тридцать минут",
-    "Translation text": "son las siete y media",
+    "Search text": "son las siete y media",
+    "Translation text": "семь часов тридцать минут",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "без десяти восемь",
-    "Translation text": "son las ocho menos diez",
+    "Search text": "son las ocho menos diez",
+    "Translation text": "без десяти восемь",
     "Search example": "",
     "Translation example": ""
   }
