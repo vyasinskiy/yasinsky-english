@@ -2742,5 +2742,477 @@
     "Translation text": "su",
     "Search example": "",
     "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "наш",
+    "Translation text": "nuestro",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "ваш",
+    "Translation text": "vuestro",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "их",
+    "Translation text": "su",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "вор",
+    "Translation text": "el ladron",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "офис",
+    "Translation text": "la oficina",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "дедушка",
+    "Translation text": "el abuelo",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "бабушка",
+    "Translation text": "la abuela",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "начальник",
+    "Translation text": "el jefe",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "брат",
+    "Translation text": "el hermano",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "жених",
+    "Translation text": "el novio",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "родной язык",
+    "Translation text": "el idioma natal",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "жизнь",
+    "Translation text": "la vida",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "юбка",
+    "Translation text": "la falda",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "идея",
+    "Translation text": "la idea",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "план",
+    "Translation text": "el plan",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "внук",
+    "Translation text": "el nieto",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "бабушка и дедушка (вместе)",
+    "Translation text": "los abuelos",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "скелет",
+    "Translation text": "el esqueleto",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "бутылка",
+    "Translation text": "la botella",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "легкий",
+    "Translation text": "facil",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "куртка",
+    "Translation text": "cazadora",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "когда?",
+    "Translation text": "cuando",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "сложный",
+    "Translation text": "dificil",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "суп",
+    "Translation text": "la sopa",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "холодный",
+    "Translation text": "frio",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "пол",
+    "Translation text": "el suelo",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "чистый",
+    "Translation text": "limpio",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "радостный",
+    "Translation text": "alegre",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "горячий",
+    "Translation text": "caliente",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "грязный",
+    "Translation text": "sucio",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "счастливый",
+    "Translation text": "feliz",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "грустный",
+    "Translation text": "triste",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "здоровый",
+    "Translation text": "sano",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "больной",
+    "Translation text": "enferno",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "спокойный",
+    "Translation text": "tranquilo",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "беспокойный",
+    "Translation text": "nervioso",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "уверенный",
+    "Translation text": "seguro",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "довольный",
+    "Translation text": "contento",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "полный",
+    "Translation text": "lleno",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "пустой",
+    "Translation text": "vacio",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "свободный",
+    "Translation text": "libre",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "готовый",
+    "Translation text": "preparado",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "уставший",
+    "Translation text": "cansado",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "занятый",
+    "Translation text": "ocupado",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "открытый",
+    "Translation text": "abierto",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "написанный",
+    "Translation text": "escrito",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "сделанный",
+    "Translation text": "hecho",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "ребята",
+    "Translation text": "los tios",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "таксист",
+    "Translation text": "el taxista",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "сумасшедший",
+    "Translation text": "loco",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "меодсестра",
+    "Translation text": "enfermera",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "какой час?",
+    "Translation text": "que hora es",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "час дня",
+    "Translation text": "es la una",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "два часа дня",
+    "Translation text": "son las dos",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "в точности (точно)",
+    "Translation text": "en punto",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "десять часов пять минут",
+    "Translation text": "son las diez y cinco",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "шесть часов пятнадцать минут",
+    "Translation text": "son las seis y cuarto",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "семь часов тридцать минут",
+    "Translation text": "son las siete y media",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "без десяти восемь",
+    "Translation text": "son las ocho menos diez",
+    "Search example": "",
+    "Translation example": ""
   }
 ]
