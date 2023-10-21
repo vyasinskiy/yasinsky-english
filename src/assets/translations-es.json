@@ -2075,7 +2075,671 @@
     "Search language": "es",
     "Translation language": "ru",
     "Search text": "a la derecha de",
-    "Translation text": "справа",
+    "Translation text": "справа от",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "a la izquierda de",
+    "Translation text": "слева от",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "cerca de",
+    "Translation text": "близко к",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "lejos de",
+    "Translation text": "далеко от",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "encima de",
+    "Translation text": "над",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el sol",
+    "Translation text": "солнце",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "sobre",
+    "Translation text": "на",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el album",
+    "Translation text": "альбом",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "enfrente de",
+    "Translation text": "напротив",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "la fuente",
+    "Translation text": "фонтан",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "a lado de",
+    "Translation text": "рядом с",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el bano esta a la derecha",
+    "Translation text": "туалет справа",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el rio esta cerca",
+    "Translation text": "река рядом",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el museo esta detras",
+    "Translation text": "музей позади",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "la estralla",
+    "Translation text": "звезда",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el metro",
+    "Translation text": "метро",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "estoy en case",
+    "Translation text": "я дома",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "donde estas",
+    "Translation text": "где ты?",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "estamos aqui",
+    "Translation text": "мы здесь",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "ellos estan el la playa",
+    "Translation text": "они на пляже",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "la casa de campo",
+    "Translation text": "загородный дом",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el tren",
+    "Translation text": "поезд",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "la cafeteria",
+    "Translation text": "кафе",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "la clase",
+    "Translation text": "урок",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el barrio",
+    "Translation text": "район",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "hay",
+    "Translation text": "есть (имеется)",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "que hay",
+    "Translation text": "что есть?",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el monedero",
+    "Translation text": "кошелек",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "hay una nevera en la cocina",
+    "Translation text": "на кухне есть холодильник?",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "en la mesa hay libros",
+    "Translation text": "на столе есть книги",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "las zapatillas",
+    "Translation text": "кроссовки",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "las zapatillas",
+    "Translation text": "тапочки",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "en la mesa no hay libros",
+    "Translation text": "на столе нет книг",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "ноль",
+    "Translation text": "cero",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "cuantas mesas",
+    "Translation text": "сколько столов?",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "cuantos lapices",
+    "Translation text": "сколько карандашей?",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "la gente",
+    "Translation text": "люди",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "muchos coches",
+    "Translation text": "много машин",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "muchas flores",
+    "Translation text": "много цветов",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "mucho dinero",
+    "Translation text": "много денег",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "mucha gente",
+    "Translation text": "много людей",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "pocos arboles",
+    "Translation text": "мало деревьев",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "pocas casas",
+    "Translation text": "мало домов",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el bolsillo",
+    "Translation text": "карман",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "poca comida",
+    "Translation text": "мало еды",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "одиннадцать",
+    "Translation text": "once",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "двенадцать",
+    "Translation text": "doce",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "тренадцать",
+    "Translation text": "trece",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "четырнадцать",
+    "Translation text": "catorce",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "пятнадцать",
+    "Translation text": "quince",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "шестнадцать",
+    "Translation text": "dieciseis",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "семнадцать",
+    "Translation text": "diecisiete",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "восемнадцать",
+    "Translation text": "dieciocho",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "девятнадцать",
+    "Translation text": "diecinueve",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "двадцать",
+    "Translation text": "veinte",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "еда",
+    "Translation text": "la comida",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "деревня",
+    "Translation text": "el pueblo",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "язык",
+    "Translation text": "la lengua",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "аптека",
+    "Translation text": "la farmacia",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "игра",
+    "Translation text": "el juego",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "парикмахерская",
+    "Translation text": "la peluqueria",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "снег",
+    "Translation text": "la nieve",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "аэропорт",
+    "Translation text": "el aeropuerto",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "добро пожаловать",
+    "Translation text": "bienvenidas",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "здание",
+    "Translation text": "el edificio",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "пять этажей",
+    "Translation text": "cinco plantas",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "комната освещенная",
+    "Translation text": "la habitacion es luminosa",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "вещь",
+    "Translation text": "la cosa",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "много вещей",
+    "Translation text": "muchas cosas",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "кроме того",
+    "Translation text": "ademas",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "сейчас",
+    "Translation text": "ahora",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "обычно",
+    "Translation text": "normalmente",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "убрана",
+    "Translation text": "esta ordenada",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "не убрана (беспорядок)",
+    "Translation text": "esta desordenada",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "место",
+    "Translation text": "el lugar",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "любимый",
+    "Translation text": "favorito",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "особенно",
+    "Translation text": "especialmente",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "странно",
+    "Translation text": "extrano",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "мебель",
+    "Translation text": "el mueble",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "одежда",
+    "Translation text": "la ropa",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "вкусный",
+    "Translation text": "rico",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "мой",
+    "Translation text": "mi",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "твой",
+    "Translation text": "tu",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "его",
+    "Translation text": "su",
     "Search example": "",
     "Translation example": ""
   }
