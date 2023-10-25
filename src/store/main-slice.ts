@@ -7,6 +7,7 @@ import {
 	Mode,
 	SynonymData,
 } from '../assets/types';
+import { resetProgressFromLocalStorage } from '../hooks/helpers';
 
 interface MainState {
 	all: MapRusKeyToSynonyms;
@@ -16,6 +17,15 @@ interface MainState {
 	succeed: MapRusKeyToEngKeys;
 	todo: MapRusKeyToSynonyms;
 }
+
+const initalState: MainState = {
+	all: mapRusKeyToSynonyms,
+	favorite: {},
+	isGameFinished: false,
+	mode: Mode.Ordinary,
+	succeed: {},
+	todo: {},
+};
 
 function isTranslationsData(data: unknown): data is MapRusKeyToEngKeys {
 	return (
@@ -69,14 +79,7 @@ function getAdvancedData(favorite: MapRusKeyToEngKeys) {
 }
 
 const lazyInitialize = (): MainState => {
-	const state: MainState = {
-		all: mapRusKeyToSynonyms,
-		favorite: {},
-		isGameFinished: false,
-		mode: Mode.Ordinary,
-		succeed: {},
-		todo: {},
-	};
+	const state: MainState = initalState;
 
 	const succeedData = localStorage.getItem('translations-succed');
 
@@ -211,9 +214,13 @@ const mainSlice = createSlice({
 				state.succeed[rusKey].push(engKey);
 			}
 		},
+		resetProgress(state) {
+			state = initalState;
+			resetProgressFromLocalStorage();
+		}
 	},
 });
 
-export const { setAsSucceed, setAsFavorite, setIsGameFinished } =
+export const { setAsSucceed, setAsFavorite, setIsGameFinished, resetProgress } =
 	mainSlice.actions;
 export default mainSlice.reducer;

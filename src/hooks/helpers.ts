@@ -49,3 +49,7 @@ export function getProgressFromLocalStorage() {
 
 	return JSON.parse(localStorageData);
 }
+
+export function resetProgressFromLocalStorage() {
+	localStorage.clear();
+}
