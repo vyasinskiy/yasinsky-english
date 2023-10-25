@@ -10,8 +10,8 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "que tal",
-    "Translation text": "как дела",
+    "Search text": "que tal?",
+    "Translation text": "как дела?",
     "Search example": "",
     "Translation example": ""
   },
@@ -74,8 +74,8 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "cual",
-    "Translation text": "какой",
+    "Search text": "cual?",
+    "Translation text": "какой?",
     "Search example": "",
     "Translation example": ""
   },
@@ -90,8 +90,8 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "encantado",
-    "Translation text": "очень рад",
+    "Search text": "estoy encantado de",
+    "Translation text": "я очень рад",
     "Search example": "",
     "Translation example": ""
   },
@@ -122,8 +122,8 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "donde vives",
-    "Translation text": "где живешь",
+    "Search text": "donde vives?",
+    "Translation text": "где живешь?",
     "Search example": "",
     "Translation example": ""
   },
@@ -146,8 +146,8 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "como te llamas",
-    "Translation text": "как тебя зовут",
+    "Search text": "como te llamas?",
+    "Translation text": "как тебя зовут?",
     "Search example": "",
     "Translation example": ""
   },
@@ -178,7 +178,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "la messa",
+    "Search text": "la mesa",
     "Translation text": "стол",
     "Search example": "",
     "Translation example": ""
@@ -378,8 +378,8 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "que es esto",
-    "Translation text": "что это",
+    "Search text": "que es esto?",
+    "Translation text": "что это?",
     "Search example": "",
     "Translation example": ""
   },
@@ -922,8 +922,8 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "como",
-    "Translation text": "какой",
+    "Search text": "como?",
+    "Translation text": "какой?",
     "Search example": "",
     "Translation example": ""
   },
@@ -1290,7 +1290,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "de que forma es",
+    "Search text": "de que forma es?",
     "Translation text": "какой формы?",
     "Search example": "",
     "Translation example": ""
@@ -1298,7 +1298,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "cuadrada",
+    "Search text": "cuadrado",
     "Translation text": "квадратный",
     "Search example": "",
     "Translation example": ""
@@ -1354,7 +1354,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "de que materal es",
+    "Search text": "de que material es?",
     "Translation text": "из какого материала?",
     "Search example": "",
     "Translation example": ""
@@ -1548,14 +1548,6 @@
     "Translation language": "ru",
     "Search text": "la camara",
     "Translation text": "камера",
-    "Search example": "",
-    "Translation example": ""
-  },
-  {
-    "Search language": "es",
-    "Translation language": "ru",
-    "Search text": "moderna",
-    "Translation text": "современный",
     "Search example": "",
     "Translation example": ""
   },
@@ -1770,7 +1762,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "que dia es hoy",
+    "Search text": "que dia es hoy?",
     "Translation text": "какой сегодня день?",
     "Search example": "",
     "Translation example": ""
@@ -1786,7 +1778,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "que dia es manana",
+    "Search text": "que dia es manana?",
     "Translation text": "какой завтра день?",
     "Search example": "",
     "Translation example": ""
@@ -1882,7 +1874,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "donde esta la messa",
+    "Search text": "donde esta la mesa?",
     "Translation text": "где стол?",
     "Search example": "",
     "Translation example": ""
@@ -2114,7 +2106,15 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "a lado de",
+    "Search text": "al lado de",
+    "Translation text": "рядом с",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "cerca de",
     "Translation text": "рядом с",
     "Search example": "",
     "Translation example": ""
@@ -2146,7 +2146,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "la estralla",
+    "Search text": "la estrella",
     "Translation text": "звезда",
     "Search example": "",
     "Translation example": ""
@@ -2162,7 +2162,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "estoy en case",
+    "Search text": "estoy en casa",
     "Translation text": "я дома",
     "Search example": "",
     "Translation example": ""
@@ -2170,7 +2170,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "donde estas",
+    "Search text": "donde estas?",
     "Translation text": "где ты?",
     "Search example": "",
     "Translation example": ""
@@ -2242,7 +2242,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "que hay",
+    "Search text": "que hay?",
     "Translation text": "что есть?",
     "Search example": "",
     "Translation example": ""
@@ -2258,7 +2258,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "hay una nevera en la cocina",
+    "Search text": "hay una nevera en la cocina?",
     "Translation text": "на кухне есть холодильник?",
     "Search example": "",
     "Translation example": ""
@@ -2306,7 +2306,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "cuantas mesas",
+    "Search text": "cuantas mesas?",
     "Translation text": "сколько столов?",
     "Search example": "",
     "Translation example": ""
@@ -2314,7 +2314,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "cuantos lapices",
+    "Search text": "cuantos lapices?",
     "Translation text": "сколько карандашей?",
     "Search example": "",
     "Translation example": ""
@@ -2866,7 +2866,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "cazadora",
+    "Search text": "la cazadora",
     "Translation text": "куртка",
     "Search example": "",
     "Translation example": ""
@@ -2874,7 +2874,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "cuando",
+    "Search text": "cuando?",
     "Translation text": "когда?",
     "Search example": "",
     "Translation example": ""
@@ -3106,15 +3106,15 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "enfermera",
-    "Translation text": "меодсестра",
+    "Search text": "la enfermera",
+    "Translation text": "медсестра",
     "Search example": "",
     "Translation example": ""
   },
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "que hora es",
+    "Search text": "que hora es?",
     "Translation text": "какой час?",
     "Search example": "",
     "Translation example": ""

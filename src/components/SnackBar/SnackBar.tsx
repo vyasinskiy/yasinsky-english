@@ -27,6 +27,7 @@ export const SnackBar = () => {
 			onClose={() => setIsOpen(false)}
 			autoHideDuration={2000}
 			message={message}
+			style={{ left: 'auto', right: '20px' }}
 		/>
 	);
 };
