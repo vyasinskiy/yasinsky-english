@@ -1,4 +1,4 @@
-import { MapRusKeyToEngKeys } from '../assets/types';
+import { MapRusKeyToEngKeys, Mode } from '../assets/types';
 
 const MAX_CONSTRAINT_INT = 30;
 
@@ -52,4 +52,22 @@ export function getProgressFromLocalStorage() {
 
 export function resetProgressFromLocalStorage() {
 	localStorage.clear();
+}
+
+export function setModeToLocalStorage(mode: Mode) {
+	localStorage.setItem('translations-mode', mode);
+}
+
+function isModeData(data: unknown): data is Mode {
+	return !!data && (data === Mode.Ordinary || data === Mode.Favorite);
+}
+
+export function getModeFromLocalStorage(): Mode {
+	const data = localStorage.getItem('translations-mode');
+
+	if (!data) {
+		return Mode.Ordinary;
+	}
+
+	return isModeData(data) ? data : Mode.Ordinary;
 }

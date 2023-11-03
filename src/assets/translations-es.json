@@ -602,22 +602,6 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "eso",
-    "Translation text": "этот (далеко)",
-    "Search example": "",
-    "Translation example": ""
-  },
-  {
-    "Search language": "es",
-    "Translation language": "ru",
-    "Search text": "esto",
-    "Translation text": "этот (близко)",
-    "Search example": "",
-    "Translation example": ""
-  },
-  {
-    "Search language": "es",
-    "Translation language": "ru",
     "Search text": "creo que",
     "Translation text": "я думаю, что",
     "Search example": "",
@@ -2186,7 +2170,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "ellos estan el la playa",
+    "Search text": "ellos estan en la playa",
     "Translation text": "они на пляже",
     "Search example": "",
     "Translation example": ""
@@ -2411,7 +2395,7 @@
     "Search language": "es",
     "Translation language": "ru",
     "Search text": "trece",
-    "Translation text": "тренадцать",
+    "Translation text": "тринадцать",
     "Search example": "",
     "Translation example": ""
   },
@@ -3178,14 +3162,6 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "aquel",
-    "Translation text": "этот (очень далеко)",
-    "Search example": "",
-    "Translation example": ""
-  },
-  {
-    "Search language": "es",
-    "Translation language": "ru",
     "Search text": "ahi",
     "Translation text": "здесь (не очень близко)",
     "Search example": "",
@@ -3660,6 +3636,606 @@
     "Translation language": "ru",
     "Search text": "en la ducha",
     "Translation text": "в душе",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "entender",
+    "Translation text": "понимать",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "nosotros comemos",
+    "Translation text": "мы едим",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "la fruta",
+    "Translation text": "фрукты",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "vender",
+    "Translation text": "продавать",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el zumo",
+    "Translation text": "сок",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el vecino",
+    "Translation text": "понимать",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "veo el coche",
+    "Translation text": "вижу машину",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "ves el edificio?",
+    "Translation text": "видишь здание?",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "ella ve la montana?",
+    "Translation text": "она видит гору?",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "vemos la calle",
+    "Translation text": "видим улицу",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "ven la pizzara",
+    "Translation text": "видят доску",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "veo a Kirill",
+    "Translation text": "вижу Кирилла",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "veo la pelicula",
+    "Translation text": "смотрю фильм",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "la carta",
+    "Translation text": "письмо",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el verso",
+    "Translation text": "стихотворение",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "vivis aqui",
+    "Translation text": "живут здесь",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el desayuno",
+    "Translation text": "завтрак",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "por la noche",
+    "Translation text": "вечером",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "trabajo el sadado",
+    "Translation text": "работаю в субботу",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "la carne",
+    "Translation text": "мясо",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "en verano",
+    "Translation text": "летом",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "viajar",
+    "Translation text": "путешествовать",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "en marzo",
+    "Translation text": "в марте",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "siempre",
+    "Translation text": "всегда",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "Kirill siempre esta preparado para la clase",
+    "Translation text": "Кирилл всегда готов к уроку",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "a menudo",
+    "Translation text": "часто",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "a veces",
+    "Translation text": "иногда",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "raramente",
+    "Translation text": "редко",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "las noticias",
+    "Translation text": "новости",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "los caramelos",
+    "Translation text": "новости",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "los miercoles",
+    "Translation text": "по средам",
+    "Search example": "practico deporte",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "la cena",
+    "Translation text": "ужин",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "en otono",
+    "Translation text": "осенью",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "en invierno",
+    "Translation text": "зимой",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "en primavera",
+    "Translation text": "весной",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "en mayo",
+    "Translation text": "в мае",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "en noviembro",
+    "Translation text": "в ноябре",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "en febrero",
+    "Translation text": "в феврале",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "en junio",
+    "Translation text": "в июне",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "por la manana",
+    "Translation text": "утром",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "por la tarde",
+    "Translation text": "днем",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "tomar cafe",
+    "Translation text": "пить кофе",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "terminar",
+    "Translation text": "заканчивать",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "cenar",
+    "Translation text": "ужинать",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "cenamos a las ocho",
+    "Translation text": "ужинаем в 8",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "a que hora?",
+    "Translation text": "во сколько?",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "la cine",
+    "Translation text": "кинотеатр",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "por las mananas",
+    "Translation text": "по утрам",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "muy a menudo",
+    "Translation text": "очень часто",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "visitar",
+    "Translation text": "посещать",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el dibujo animado",
+    "Translation text": "мультик",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "quien?",
+    "Translation text": "кто?",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "cuales?",
+    "Translation text": "какие?",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "cuales son las estaciones del ano?",
+    "Translation text": "какие существуют времена года?",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "estamos en primavera",
+    "Translation text": "сейчас весна",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "enero",
+    "Translation text": "январь",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "febrero",
+    "Translation text": "февраль",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "marzo",
+    "Translation text": "март",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "abril",
+    "Translation text": "апрель",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "mayo",
+    "Translation text": "май",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "junio",
+    "Translation text": "июнь",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "agosto",
+    "Translation text": "август",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "setiembre",
+    "Translation text": "сентябрь",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "octubre",
+    "Translation text": "октябрь",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "noviembre",
+    "Translation text": "ноябрь",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "diciembre",
+    "Translation text": "декабрь",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "tener",
+    "Translation text": "иметь",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "en que estacion del ano estamos?",
+    "Translation text": "какое сейчас время года?",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "en que mes estamos?",
+    "Translation text": "какой сейчас месяц?",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "regresar",
+    "Translation text": "вернуться",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "volver",
+    "Translation text": "вернуться",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el curso",
+    "Translation text": "курс",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "empiezo",
+    "Translation text": "начинаю",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "emprezar",
+    "Translation text": "начинать",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "ciero",
+    "Translation text": "закрываю",
     "Search example": "",
     "Translation example": ""
   }

@@ -7,7 +7,7 @@ import {
 	Mode,
 	SynonymData,
 } from '../assets/types';
-import { resetProgressFromLocalStorage } from '../hooks/helpers';
+import { getModeFromLocalStorage, resetProgressFromLocalStorage, setModeToLocalStorage } from '../hooks/helpers';
 
 interface MainState {
 	all: MapRusKeyToSynonyms;
@@ -39,11 +39,7 @@ function isTranslationsData(data: unknown): data is MapRusKeyToEngKeys {
 	);
 }
 
-function isModeData(data: unknown): data is Mode {
-	return !!data && (data === Mode.Ordinary || data === Mode.Favorite);
-}
-
-function getAdvancedData(favorite: MapRusKeyToEngKeys) {
+function getFavoriteTodo(favorite: MapRusKeyToEngKeys) {
 	const advancedData = {} as MapRusKeyToSynonyms;
 
 	for (const [rusKey, engFavoriteValues] of Object.entries(favorite)) {
@@ -78,59 +74,55 @@ function getAdvancedData(favorite: MapRusKeyToEngKeys) {
 	return advancedData;
 }
 
-const lazyInitialize = (): MainState => {
-	const state: MainState = initalState;
+function getOrdinaryTodo(succeed: MainState['succeed']) {
+	return Object.keys(mapRusKeyToSynonyms).reduce((acc, rusKey) => {
+		const rusKeySucceedData = succeed[rusKey];
+		const synonymsData = mapRusKeyToSynonyms[rusKey];
 
-	const succeedData = localStorage.getItem('translations-succed');
+		if (rusKeySucceedData && rusKeySucceedData.length > 0) {
+			const todoSynonyms = synonymsData.filter(
+				(synonymData) =>
+					!rusKeySucceedData.includes(synonymData.engKey)
+			);
 
-	if (succeedData) {
-		const succeed = JSON.parse(succeedData);
-		state.succeed = isTranslationsData(succeed) ? succeed : {};
-	}
-
-	const favoriteData = localStorage.getItem('translations-favorite');
-
-	if (favoriteData) {
-		const favorite = JSON.parse(favoriteData);
-		state.favorite = isTranslationsData(favorite) ? favorite : {};
-	}
-
-	// const modeData = localStorage.getItem('translations-mode');
-
-	// if (modeData) {
-	// 	state.mode = isModeData(modeData) ? modeData : Mode.Ordinary;
-	// }
-
-	if (state.mode === Mode.Favorite) {
-		state.todo = getAdvancedData(state.favorite);
-	} else {
-		const todo = Object.keys(mapRusKeyToSynonyms).reduce((acc, rusKey) => {
-			const rusKeySucceedData = state.succeed[rusKey];
-			const synonymsData = mapRusKeyToSynonyms[rusKey];
-
-			if (rusKeySucceedData && rusKeySucceedData.length > 0) {
-				const todoSynonyms = synonymsData.filter(
-					(synonymData) =>
-						!rusKeySucceedData.includes(synonymData.engKey)
-				);
-
-				if (todoSynonyms.length === 0) {
-					return acc;
-				} else {
-					return {
-						...acc,
-						[rusKey]: todoSynonyms,
-					};
-				}
+			if (todoSynonyms.length === 0) {
+				return acc;
 			} else {
 				return {
 					...acc,
-					[rusKey]: synonymsData,
+					[rusKey]: todoSynonyms,
 				};
 			}
-		}, {});
+		} else {
+			return {
+				...acc,
+				[rusKey]: synonymsData,
+			};
+		}
+	}, {});
+}
 
-		state.todo = todo;
+const getTranslationData = (key: string) => {
+	const data = localStorage.getItem(key);
+
+	if (!data) {
+		return {};
+	}
+
+	const parsed = JSON.parse(data);
+	return isTranslationsData(parsed) ? parsed : {};
+}
+
+const lazyInitialize = (): MainState => {
+	const state: MainState = initalState;
+	state.succeed = getTranslationData('translations-succed');
+	state.favorite = getTranslationData('translations-favorite');
+	state.mode = getModeFromLocalStorage();
+
+	if (state.mode === Mode.Favorite) {
+		state.todo = getFavoriteTodo(state.favorite);
+	} else {
+		state.todo = getOrdinaryTodo(state.succeed);
 	}
 
 	state.isGameFinished = Object.keys(state.todo).length === 0;
@@ -217,10 +209,14 @@ const mainSlice = createSlice({
 		resetProgress(state) {
 			state = initalState;
 			resetProgressFromLocalStorage();
+		},
+		changeMode(state, action: PayloadAction<{ mode: Mode }>) {
+			setModeToLocalStorage(action.payload.mode);
+			state.mode = action.payload.mode;
 		}
 	},
 });
 
-export const { setAsSucceed, setAsFavorite, setIsGameFinished, resetProgress } =
+export const { setAsSucceed, setAsFavorite, setIsGameFinished, resetProgress, changeMode } =
 	mainSlice.actions;
 export default mainSlice.reducer;

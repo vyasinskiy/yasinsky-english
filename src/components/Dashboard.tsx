@@ -11,9 +11,11 @@ import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import { Button } from '@mui/material';
+import { Button, FormControlLabel, Radio, RadioGroup } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import { resetProgress } from '../store';
+import { resetProgress, changeMode, RootState } from '../store';
+import { Mode } from '../assets/types';
+import { useSelector } from 'react-redux';
 
 
 const drawerWidth = 240;
@@ -80,6 +82,8 @@ export default function Dashboard({ children }: DashboardProps) {
     setOpen(!open);
   };
 
+  const mode = useSelector((state: RootState) => state.mode);
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <Box sx={{ display: 'flex' }}>
@@ -128,12 +132,22 @@ export default function Dashboard({ children }: DashboardProps) {
           </Toolbar>
           <Divider />
           {open && (
-            <Button
-              variant="outlined"
-              onClick={() => dispatch(resetProgress())}
-            >
-              Reset
-            </Button>
+            <>
+              <Button
+                variant="outlined"
+                onClick={() => dispatch(resetProgress())}
+              >
+                Reset
+              </Button>
+              <RadioGroup
+                name="game-mods"
+                value={mode}
+                onChange={(event) => dispatch(changeMode({ mode: event.target.value as Mode }))}
+              >
+                <FormControlLabel value={Mode.Ordinary} control={<Radio />} label="Ordinary" />
+                <FormControlLabel value={Mode.Favorite} control={<Radio />} label="Favorite" />
+              </RadioGroup>
+            </>
           )}
         </Drawer>
         <Box
