@@ -50,8 +50,8 @@ export function getProgressFromLocalStorage() {
 	return JSON.parse(localStorageData);
 }
 
-export function resetProgressFromLocalStorage() {
-	localStorage.clear();
+export function resetProgressFromLocalStorage(key: string) {
+	localStorage.removeItem(key);
 }
 
 export function setModeToLocalStorage(mode: Mode) {

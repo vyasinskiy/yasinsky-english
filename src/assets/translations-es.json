@@ -3162,22 +3162,6 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "ahi",
-    "Translation text": "здесь (не очень близко)",
-    "Search example": "",
-    "Translation example": ""
-  },
-  {
-    "Search language": "es",
-    "Translation language": "ru",
-    "Search text": "alli",
-    "Translation text": "там (очень далеко)",
-    "Search example": "",
-    "Translation example": ""
-  },
-  {
-    "Search language": "es",
-    "Translation language": "ru",
     "Search text": "aquellos gatos",
     "Translation text": "те коты (очень далеко)",
     "Search example": "",
@@ -3683,7 +3667,7 @@
     "Search language": "es",
     "Translation language": "ru",
     "Search text": "el vecino",
-    "Translation text": "понимать",
+    "Translation text": "сосед",
     "Search example": "",
     "Translation example": ""
   },
@@ -3786,7 +3770,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "trabajo el sadado",
+    "Search text": "trabajo el sabado",
     "Translation text": "работаю в субботу",
     "Search example": "",
     "Translation example": ""
@@ -3875,7 +3859,7 @@
     "Search language": "es",
     "Translation language": "ru",
     "Search text": "los caramelos",
-    "Translation text": "новости",
+    "Translation text": "конфеты",
     "Search example": "",
     "Translation example": ""
   },
@@ -4226,7 +4210,7 @@
   {
     "Search language": "es",
     "Translation language": "ru",
-    "Search text": "emprezar",
+    "Search text": "empezar",
     "Translation text": "начинать",
     "Search example": "",
     "Translation example": ""

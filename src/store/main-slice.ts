@@ -208,7 +208,7 @@ const mainSlice = createSlice({
 		},
 		resetProgress(state) {
 			state = initalState;
-			resetProgressFromLocalStorage();
+			resetProgressFromLocalStorage('translations-succed');
 		},
 		changeMode(state, action: PayloadAction<{ mode: Mode }>) {
 			setModeToLocalStorage(action.payload.mode);
