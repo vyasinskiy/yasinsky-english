@@ -23,13 +23,12 @@ function isAcceptedIndex(
 	newIndex: number,
 	maxIndex: number
 ) {
-	const acceptedAsLastWord = newIndex === 0 && maxIndex === 0;
-	const acceptedAsSecondToLast =
-		currentIndex === 1 && newIndex === 0 && maxIndex === 1;
+	const acceptedAsSecondToLast = newIndex === 1 && maxIndex === 1;
+	const acceptedAsLastWord = currentIndex === 1 && newIndex === 0 && maxIndex === 0;
 	// we must avoid index === 0 to proceed with rerender after index update
 	// as at the end of the game index may be changed from 0 => 0 withour rerender
 	const acceptedAsNotZero =
-		!acceptedAsLastWord && !acceptedAsSecondToLast && newIndex !== 0;
+		newIndex !== 0 && !acceptedAsLastWord && !acceptedAsSecondToLast;
 
 	return acceptedAsLastWord || acceptedAsSecondToLast || acceptedAsNotZero;
 }
