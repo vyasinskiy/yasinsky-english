@@ -7106,5 +7106,477 @@
     "Translation text": "скользят",
     "Search example": "",
     "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "apoyacabeza",
+    "Translation text": "подголовник",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "las herramientas",
+    "Translation text": "инструменты",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el volante",
+    "Translation text": "руль",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el parabrisas",
+    "Translation text": "ветровое стекло",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el chasis ",
+    "Translation text": "шасси",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "la carroceria",
+    "Translation text": "кузов",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "la pantalla",
+    "Translation text": "экран",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "sistema de alimentacion",
+    "Translation text": "топливная система",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el deposito",
+    "Translation text": "бак",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "fondo del deposito",
+    "Translation text": "дно бака",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el inyeccion",
+    "Translation text": "система впрыска",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "los bornes",
+    "Translation text": "клемы",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el alternador",
+    "Translation text": "генератор",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el regulador",
+    "Translation text": "контроллер",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el ciguenal",
+    "Translation text": "коленвал",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "correa",
+    "Translation text": "ремень",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "bateria agotada",
+    "Translation text": "разряженная батарея",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "motor de arranque",
+    "Translation text": "стартер",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "llave de contacto",
+    "Translation text": "ключ зажигания",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "circuito de encendido",
+    "Translation text": "цепь зажигания",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "bujia",
+    "Translation text": "свеча",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "las bombillas",
+    "Translation text": "лампочки",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "lubricante",
+    "Translation text": "смазка",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "varilla indicadora",
+    "Translation text": "щуп",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "aceite",
+    "Translation text": "масло",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "liquido refrigerante",
+    "Translation text": "охлаждащющая жидкость",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "vaso de expansion",
+    "Translation text": "расширительный бачок",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "la bomba de agua",
+    "Translation text": "водяной насос",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "ruedas motrices",
+    "Translation text": "ведущие колеса",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "vehiculo de traccion",
+    "Translation text": "переднеприводный автомобиль",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "vehiculo a propulsion",
+    "Translation text": "заднеприводный автомобиль",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el tubo de escape",
+    "Translation text": "выхлопная труба",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el dirreccion asistida",
+    "Translation text": "гидроусилитель рубля",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "muelles",
+    "Translation text": "пружины",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "pastillas de freno",
+    "Translation text": "тормозные колодки",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "llantas",
+    "Translation text": "шины",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "salpicadero",
+    "Translation text": "приборная панель",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "limpiaparabrisas",
+    "Translation text": "дворник",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "lavaparabrisas",
+    "Translation text": "стеклоомыватель",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "alarma",
+    "Translation text": "сигнализация",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "luneta",
+    "Translation text": "заднее стекло",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "ventanillas",
+    "Translation text": "боковые стекла",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "antivaho",
+    "Translation text": "обдув стекол",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "los asientos blandos",
+    "Translation text": "мягкие кресла",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "llantas",
+    "Translation text": "шины",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "hombro",
+    "Translation text": "плечо",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "cuelo",
+    "Translation text": "шея",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "clavicula",
+    "Translation text": "ключица",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "pecho",
+    "Translation text": "грудь",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "caderas",
+    "Translation text": "бедра",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "abdomen",
+    "Translation text": "живот",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "barriga",
+    "Translation text": "живот",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "huesos",
+    "Translation text": "кости",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "lesiones cervicales",
+    "Translation text": "шейные травмы",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "cabeza",
+    "Translation text": "голова",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "nuca",
+    "Translation text": "затылок",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "el pie",
+    "Translation text": "нога",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "las piernas",
+    "Translation text": "ноги",
+    "Search example": "",
+    "Translation example": ""
+  },
+  {
+    "Search language": "es",
+    "Translation language": "ru",
+    "Search text": "espalda",
+    "Translation text": "спина",
+    "Search example": "",
+    "Translation example": ""
   }
 ]
